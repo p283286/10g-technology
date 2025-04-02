@@ -11,6 +11,7 @@ import Contact from '@/components/Contact';
 import News from '@/components/News';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <LanguageSwitcher />
     </div>
   );
 };

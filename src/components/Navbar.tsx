@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Shield, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -26,12 +28,12 @@ const Navbar = () => {
   };
   
   const navLinks = [
-    { name: '公司簡介', href: '#about' },
-    { name: '服務與解決方案', href: '#services' },
-    { name: '成功案例', href: '#case-studies' },
-    { name: '專業認證', href: '#certifications' },
-    { name: '知識中心', href: '#knowledge' },
-    { name: '聯繫我們', href: '#contact' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.case-studies'), href: '#case-studies' },
+    { name: t('nav.certifications'), href: '#certifications' },
+    { name: t('nav.knowledge'), href: '#knowledge' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -43,7 +45,7 @@ const Navbar = () => {
         <a href="#" className="flex items-center gap-2">
           <Shield className="h-8 w-8 text-cyber-accent" />
           <span className="text-xl font-bold text-cyber-dark">
-            安全視界<span className="text-cyber-accent">科技</span>
+            {t('company.name')}
           </span>
         </a>
         
@@ -55,7 +57,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button className="ml-4 bg-cyber-accent hover:bg-cyber-blue-accent">
-            免費安全評估
+            {t('cta.free-assessment')}
           </Button>
         </nav>
         
@@ -84,7 +86,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button className="mt-2 bg-cyber-accent hover:bg-cyber-blue-accent">
-              免費安全評估
+              {t('cta.free-assessment')}
             </Button>
           </div>
         </nav>
