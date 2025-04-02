@@ -119,7 +119,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // News
     'news.title': 'Latest News',
-    'news.subtitle': 'Stay updated with 10G Technology's latest developments, product updates, and industry events.',
+    'news.subtitle': "Stay updated with 10G Technology's latest developments, product updates, and industry events.",
     'news.read-more': 'Read More',
     'news.view-all': 'View All News',
     'news.company': 'Company News',
