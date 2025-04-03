@@ -2,8 +2,18 @@
 import React from 'react';
 import { Shield, Lock, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div className="relative py-20 md:py-32 overflow-hidden">
       {/* Background Gradient */}
@@ -27,7 +37,12 @@ const Hero = () => {
               <Button size="lg" className="bg-cyber-accent hover:bg-cyber-blue-light text-white">
                 了解我們的服務
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white/10"
+                onClick={scrollToContact}
+              >
                 聯繫專家顧問
               </Button>
             </div>
