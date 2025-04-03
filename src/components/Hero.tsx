@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -26,16 +26,27 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 text-center md:text-left">
             <h1 className="text-white mb-6 leading-tight">
-              保護您的數字資產<br />
-              <span className="text-cyber-accent">專業網絡安全解決方案</span>
+              {language === 'zh' ? (
+                <>
+                  保護您的數字資產<br />
+                  <span className="text-cyber-accent">專業網絡安全解決方案</span>
+                </>
+              ) : (
+                <>
+                  Protect Your Digital Assets<br />
+                  <span className="text-cyber-accent">Professional Cybersecurity Solutions</span>
+                </>
+              )}
             </h1>
             <p className="text-slate-200 mb-8 text-lg md:text-xl max-w-xl">
-              全方位的網絡安全服務，從威脅檢測到事件響應，我們幫助企業構建堅固的安全防線，防範各類網絡威脅。
+              {language === 'zh' 
+                ? '全方位的網絡安全服務，從威脅檢測到事件響應，我們幫助企業構建堅固的安全防線，防範各類網絡威脅。'
+                : 'Comprehensive cybersecurity services, from threat detection to incident response, we help businesses build robust security defenses against all types of cyber threats.'}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button size="lg" className="bg-cyber-accent hover:bg-cyber-blue-light text-white">
-                了解我們的服務
+                {language === 'zh' ? '了解我們的服務' : 'Explore Our Services'}
               </Button>
               <Button 
                 size="lg" 
@@ -43,22 +54,22 @@ const Hero = () => {
                 className="border-white text-white hover:bg-white/10"
                 onClick={scrollToContact}
               >
-                聯繫專家顧問
+                {language === 'zh' ? '聯繫專家顧問' : 'Contact Expert Advisors'}
               </Button>
             </div>
             
             <div className="mt-12 flex flex-wrap justify-center md:justify-start gap-6">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-cyber-accent" />
-                <span className="text-white">資深專家團隊</span>
+                <span className="text-white">{language === 'zh' ? '資深專家團隊' : 'Expert Team'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-cyber-accent" />
-                <span className="text-white">國際安全認證</span>
+                <span className="text-white">{language === 'zh' ? '國際安全認證' : 'International Certifications'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-cyber-accent" />
-                <span className="text-white">24/7全天候支援</span>
+                <span className="text-white">{language === 'zh' ? '24/7全天候支援' : '24/7 Support'}</span>
               </div>
             </div>
           </div>
