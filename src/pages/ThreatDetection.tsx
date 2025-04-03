@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Shield, Search, Database, Activity, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
@@ -10,6 +9,10 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const ThreatDetection = () => {
   const { language, t } = useLanguage();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const content = {
     zh: {
