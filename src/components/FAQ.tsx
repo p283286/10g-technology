@@ -14,12 +14,12 @@ const FAQ = () => {
       answer: '我們建議從全面的安全評估開始，這將幫助識別您組織的具體風險和安全需求。基於評估結果，我們的專家團隊將為您推薦最適合的安全解決方案。您可以聯繫我們預約免費的初步諮詢。'
     },
     {
-      question: '安全視界科技服務哪些行業？',
+      question: '天機科技服務哪些行業？',
       answer: '我們為各行各業提供網絡安全服務，包括但不限於金融服務、醫療健康、製造、零售、教育、政府和科技等。我們的解決方案可以根據不同行業的特定需求和合規要求進行定制。'
     },
     {
       question: '發生安全事件時，應該如何聯繫你們？',
-      answer: '我們提供24/7全天候的緊急響應服務。您可以通過我們的緊急熱線+852 2765 4321聯繫我們，或發送郵件至emergency@secure-horizon.com。我們的事件響應團隊將立即處理您的請求。'
+      answer: '我們提供24/7全天候的緊急響應服務。您可以通過我們的緊急熱線+852 97930974聯繫我們，或發送郵件至emergency@10gtechnology.com。我們的事件響應團隊將立即處理您的請求。'
     },
     {
       question: '你們如何確保安全評估的保密性？',
@@ -63,7 +63,7 @@ const FAQ = () => {
         <p className="text-slate-600 mb-4">
           還有其他問題？請直接聯繫我們的客戶服務團隊
         </p>
-        <div className="font-semibold text-cyber-accent">info@secure-horizon.com | +852 2123 4567</div>
+        <div className="font-semibold text-cyber-accent">info@10gtechnology.com | +852 97930974</div>
       </div>
     </section>
   );

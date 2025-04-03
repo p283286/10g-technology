@@ -22,7 +22,7 @@ const About = () => {
       <div className="text-center mb-16">
         <h2 className="mb-4">公司簡介</h2>
         <p className="max-w-3xl mx-auto text-slate-600">
-          安全視界科技成立於2010年，是領先的網絡安全服務提供商，專注於為企業提供全方位的資訊安全解決方案。
+          天機科技成立於2010年，是領先的網絡安全服務提供商，專注於為企業提供全方位的資訊安全解決方案。
         </p>
       </div>
       
