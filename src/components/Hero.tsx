@@ -45,9 +45,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button size="lg" className="bg-cyber-accent hover:bg-cyber-blue-light text-white">
-                {language === 'zh' ? '了解我們的服務' : 'Explore Our Services'}
-              </Button>
+              {/* Removed the "了解我們的服務" button */}
               <Button 
                 size="lg" 
                 variant="outline" 

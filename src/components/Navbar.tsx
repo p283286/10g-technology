@@ -27,12 +27,17 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   const navLinks = [
     { name: t('nav.about'), href: '#about' },
     { name: t('nav.services'), href: '#services' },
-    { name: t('nav.case-studies'), href: '#case-studies' },
-    { name: t('nav.certifications'), href: '#certifications' },
-    { name: t('nav.knowledge'), href: '#knowledge' },
+    // Removed: case-studies, certifications, knowledge
     { name: t('nav.contact'), href: '#contact' },
   ];
 
@@ -53,7 +58,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="ml-4 bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold">
+          <Button 
+            onClick={scrollToContact}
+            className="ml-4 bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold">
             {t('cta.free-assessment')}
           </Button>
         </nav>
@@ -82,7 +89,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="mt-2 bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold">
+            <Button 
+              onClick={() => {
+                toggleMenu();
+                scrollToContact();
+              }}
+              className="mt-2 bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold">
               {t('cta.free-assessment')}
             </Button>
           </div>

@@ -4,6 +4,7 @@ import { Mail, Phone, MessageSquare, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useToast } from "@/components/ui/use-toast";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const ContactInfoItem = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
   <div className="flex items-start">
@@ -27,6 +28,7 @@ const Contact = () => {
     privacyAgreed: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isEmergencyDialogOpen, setIsEmergencyDialogOpen] = useState(false);
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -126,8 +128,16 @@ const Contact = () => {
           <h3 className="text-2xl mb-6">{t('contact.direct')}</h3>
           <div className="space-y-8 mb-10">
             <ContactInfoItem icon={<Mail size={24} />} title={t('contact.email')}>
-              <p className="text-slate-600">{t('footer.email')}</p>
-              <p className="text-slate-600">{t('footer.support-email')}</p>
+              <p className="text-slate-600">
+                <a href="mailto:info@10gtechnology.com" className="text-cyber-accent hover:underline">
+                  info@10gtechnology.com
+                </a>
+              </p>
+              <p className="text-slate-600">
+                <a href="mailto:support@10gtechnology.com" className="text-cyber-accent hover:underline">
+                  support@10gtechnology.com
+                </a>
+              </p>
             </ContactInfoItem>
             
             <ContactInfoItem icon={<Phone size={24} />} title={t('contact.phone')}>
@@ -145,12 +155,22 @@ const Contact = () => {
             <p className="text-white/90 mb-4">
               {t('contact.free-assessment.desc')}
             </p>
-            <Button variant="secondary">{t('contact.apply-now')}</Button>
+            <Button 
+              variant="secondary"
+              onClick={() => {
+                const contactForm = document.getElementById('contact-form');
+                if (contactForm) {
+                  contactForm.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              {t('contact.apply-now')}
+            </Button>
           </div>
         </div>
         
         <div>
-          <div className="cyber-card p-6 h-full">
+          <div className="cyber-card p-6 h-full" id="contact-form">
             <h3 className="text-2xl mb-6">{t('contact.message')}</h3>
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -262,15 +282,51 @@ const Contact = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" variant="secondary" className="whitespace-nowrap">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="whitespace-nowrap"
+              onClick={() => window.open('https://wa.me/85297930974', '_blank')}
+            >
               {t('contact.online-chat')}
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-cyber-blue-light whitespace-nowrap">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-cyber-blue-light whitespace-nowrap"
+              onClick={() => setIsEmergencyDialogOpen(true)}
+            >
               {t('contact.emergency-hotline')}
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Emergency Hotline Dialog */}
+      <Dialog open={isEmergencyDialogOpen} onOpenChange={setIsEmergencyDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold">
+              {language === 'zh' ? '緊急熱線' : 'Emergency Hotline'}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col items-center py-6">
+            <Phone className="h-12 w-12 text-cyber-accent mb-4" />
+            <p className="text-2xl font-bold text-cyber-dark">+852 97930974</p>
+            <p className="mt-4 text-center text-slate-600">
+              {language === 'zh' 
+                ? '我們的緊急支援團隊全天候待命，隨時為您提供協助。'
+                : 'Our emergency support team is available 24/7 to assist you.'}
+            </p>
+            <Button 
+              className="mt-6 bg-cyber-accent text-white"
+              onClick={() => window.location.href = 'tel:+85297930974'}
+            >
+              {language === 'zh' ? '立即撥打' : 'Call Now'}
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

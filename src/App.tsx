@@ -22,6 +22,9 @@ import AccessCardProtection from "./pages/AccessCardProtection";
 import SecurityTraining from "./pages/SecurityTraining";
 import KnowledgeCenter from "./pages/KnowledgeCenter";
 import SecurityResources from "./pages/SecurityResources";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import LegalNotice from "./pages/LegalNotice";
 
 // ScrollToTop component to ensure all pages start at the top
 const ScrollToTop = () => {
@@ -60,6 +63,9 @@ const App = () => (
             <Route path="/security-training" element={<SecurityTraining />} />
             <Route path="/knowledge-center" element={<KnowledgeCenter />} />
             <Route path="/security-resources" element={<SecurityResources />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/legal-notice" element={<LegalNotice />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
