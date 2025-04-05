@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // Define available languages
@@ -82,7 +81,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.describe': '請描述您的需求或問題...',
     'contact.privacy-agreement': '我同意隱私政策條款',
     'contact.send-message': '發送訊息',
-    'contact.emergency-support': '即時支援',
+    'contact.emergency-support': '緊急即時支援',
     'contact.emergency-help': '需要緊急協助？',
     'contact.emergency-desc': '面臨安全事件或需要即時專業建議？我們的安全專家隨時為您提供支援。',
     'contact.online-chat': '在線諮詢',
@@ -155,7 +154,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.describe': 'Please describe your requirements or questions...',
     'contact.privacy-agreement': 'I agree to the privacy policy terms',
     'contact.send-message': 'Send Message',
-    'contact.emergency-support': 'Immediate Support',
+    'contact.emergency-support': 'Emergency Immediate Support',
     'contact.emergency-help': 'Need Emergency Assistance?',
     'contact.emergency-desc': 'Facing a security incident or need immediate professional advice? Our security experts are available to support you.',
     'contact.online-chat': 'Online Consultation',

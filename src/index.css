@@ -65,6 +65,28 @@
   .blue-glow {
     @apply shadow-[0_0_15px_rgba(77,170,255,0.5)];
   }
+
+  /* Improved button styles for better contrast */
+  button.bg-cyber-accent, 
+  a.bg-cyber-accent {
+    @apply text-white font-medium;
+  }
+
+  button.bg-cyber-blue-light,
+  a.bg-cyber-blue-light {
+    @apply text-white font-medium;
+  }
+
+  button.bg-cyber-warning,
+  a.bg-cyber-warning {
+    @apply text-cyber-dark font-medium;
+  }
+
+  /* Make outline buttons more visible */
+  button[variant="outline"],
+  a[variant="outline"] {
+    @apply border-2;
+  }
 }
 
 @layer base {

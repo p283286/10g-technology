@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Shield, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -43,10 +43,7 @@ const Navbar = () => {
     )}>
       <div className="container px-4 mx-auto flex justify-between items-center">
         <a href="#" className="flex items-center gap-2">
-          <Shield className="h-8 w-8 text-cyber-accent" />
-          <span className="text-xl font-bold text-cyber-dark">
-            {t('company.name')}
-          </span>
+          <img src="https://10gtechnology.com/images/logo.png" alt="10G Technology" className="h-10" />
         </a>
         
         {/* Desktop Navigation */}
@@ -56,7 +53,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="ml-4 bg-cyber-accent hover:bg-cyber-blue-accent">
+          <Button className="ml-4 bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold">
             {t('cta.free-assessment')}
           </Button>
         </nav>
@@ -85,7 +82,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="mt-2 bg-cyber-accent hover:bg-cyber-blue-accent">
+            <Button className="mt-2 bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold">
               {t('cta.free-assessment')}
             </Button>
           </div>
