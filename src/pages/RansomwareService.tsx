@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Shield, FileRestore, Clock, Database, CheckCircle } from 'lucide-react';
+import { Shield, FileX, Clock, Database, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
@@ -25,7 +25,7 @@ const RansomwareService = () => {
         {
           title: '數據恢復',
           description: '專業的數據恢復技術，最大限度地恢復被加密文件，減少數據丟失。',
-          icon: <FileRestore className="h-10 w-10 text-cyber-accent" />
+          icon: <FileX className="h-10 w-10 text-cyber-accent" />
         },
         {
           title: '安全防護',
@@ -62,7 +62,7 @@ const RansomwareService = () => {
         {
           title: 'Data Recovery',
           description: 'Professional data recovery technology to maximize the recovery of encrypted files and reduce data loss.',
-          icon: <FileRestore className="h-10 w-10 text-cyber-accent" />
+          icon: <FileX className="h-10 w-10 text-cyber-accent" />
         },
         {
           title: 'Security Protection',
@@ -90,7 +90,7 @@ const RansomwareService = () => {
   
   const icons = [
     <Clock className="h-10 w-10 text-cyber-accent" />,
-    <FileRestore className="h-10 w-10 text-cyber-accent" />,
+    <FileX className="h-10 w-10 text-cyber-accent" />,
     <Shield className="h-10 w-10 text-cyber-accent" />,
     <Database className="h-10 w-10 text-cyber-accent" />
   ];
