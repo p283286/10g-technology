@@ -18,23 +18,23 @@ const InternalPenetrationTesting = () => {
       description: '我們的內部滲透測試服務模擬企業內部惡意行為者的活動，評估內部安全控制措施的有效性。通過這種方式，我們幫助您識別和修復可能被內部人員或已入侵系統利用的安全漏洞。',
       benefits: [
         {
-          title: '內部風險評估',
-          description: '全面評估組織內部網絡和系統的安全風險，識別可能被惡意內部人員利用的漏洞。',
+          title: '了解未知風險',
+          description: '內部滲透測試發現內部網絡、系統和應用程序中的弱點，幫助識別潛在的安全漏洞。',
           icon: <UserCheck className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '內部防禦強化',
-          description: '基於測試結果提出具體的安全加固建議，提升內部安全控制的有效性。',
+          title: '風險緩解',
+          description: '內部滲透測試使組織能夠主動解決風險，實施安全措施，並加強控制以防止未授權訪問和數據洩露。',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '橫向移動風險識別',
-          description: '評估攻擊者在初始訪問後橫向移動至關鍵系統的能力，揭示潛在的攻擊路徑。',
+          title: '合規要求',
+          description: '內部滲透測試幫助組織滿足GDPR、PCI DSS、HIPAA、ISO 27001等監管標準的要求，確保安全標準的遵守。',
           icon: <AlertTriangle className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '權限升級評估',
-          description: '測試從普通用戶權限提升至系統管理員或其他特權帳戶的可能性，發現權限控制缺陷。',
+          title: '高效能密碼破解',
+          description: '利用強大的GPU進行實時密碼破解測試，評估密碼策略的安全強度。',
           icon: <Monitor className="h-10 w-10 text-cyber-accent" />
         }
       ],
@@ -55,23 +55,23 @@ const InternalPenetrationTesting = () => {
       description: 'Our Internal Penetration Testing services simulate the activities of malicious actors within the enterprise to evaluate the effectiveness of internal security controls. Through this approach, we help you identify and fix security vulnerabilities that could be exploited by insiders or compromised systems.',
       benefits: [
         {
-          title: 'Internal Risk Assessment',
-          description: 'Comprehensively assess the security risks of internal networks and systems, identifying vulnerabilities that could be exploited by malicious insiders.',
+          title: 'Know the Unknown',
+          description: 'Internal penetration testing uncovers weaknesses in internal networks, systems, and applications, helping to identify potential security vulnerabilities.',
           icon: <UserCheck className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Internal Defense Enhancement',
-          description: 'Provide specific security hardening recommendations based on test results to improve the effectiveness of internal security controls.',
+          title: 'Risk Mitigation',
+          description: 'Internal penetration testing allows organizations to proactively address risks, implement security measures, and strengthen controls to prevent unauthorized access and data breaches.',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Lateral Movement Risk Identification',
-          description: 'Assess an attacker\'s ability to move laterally to critical systems after initial access, revealing potential attack paths.',
+          title: 'Compliance',
+          description: 'Internal penetration testing helps organizations meet regulatory requirements by ensuring adherence to security standards like GDPR, PCI DSS, HIPAA, ISO 27001 and more.',
           icon: <AlertTriangle className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Privilege Escalation Assessment',
-          description: 'Test the possibility of escalating from regular user privileges to system administrator or other privileged accounts, discovering privilege control defects.',
+          title: 'Real-time Password Cracking',
+          description: 'Leverage powerful GPU capabilities for real-time password cracking tests to evaluate the security strength of password policies.',
           icon: <Monitor className="h-10 w-10 text-cyber-accent" />
         }
       ],

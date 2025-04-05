@@ -11,6 +11,7 @@ interface Benefit {
   title: string;
   description: string;
   icon: React.ReactNode;
+  videoUrl?: string;
 }
 
 interface ServicePageContent {
@@ -94,6 +95,16 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
                       </div>
                       <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                       <p className="text-slate-600">{benefit.description}</p>
+                      {benefit.videoUrl && (
+                        <div className="mt-4">
+                          <video 
+                            src={benefit.videoUrl} 
+                            controls 
+                            className="w-full rounded-md shadow"
+                            poster="/placeholder.svg"
+                          />
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}

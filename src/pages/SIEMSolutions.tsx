@@ -18,23 +18,23 @@ const SIEMSolutions = () => {
       description: '我們的SIEM解決方案幫助企業集中收集、關聯和分析來自各個系統、設備和應用的安全日誌和事件數據。通過先進的分析和自動化，幫助您快速識別潛在威脅，提高安全團隊的工作效率。',
       benefits: [
         {
-          title: '全面威脅可視性',
-          description: '集中收集和分析來自所有IT資產的安全數據，提供企業安全狀態的全面視圖。',
+          title: '威脅檢測',
+          description: 'SIEM（安全信息和事件管理）實現對安全事件的實時監控和關聯分析，幫助及時檢測和應對潛在威脅和安全事件。',
           icon: <Database className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '即時威脅檢測',
-          description: '實時監控和分析安全事件，快速識別異常活動和潛在威脅。',
+          title: '事件響應',
+          description: 'SIEM提供事件響應的集中平台，使安全團隊能夠高效地調查和應對安全事件。它幫助簡化事件管理流程並縮短響應時間。',
           icon: <Activity className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '智能威脅分析',
-          description: '運用高級分析和機器學習技術，提高威脅檢測的準確性，減少誤報。',
+          title: '日誌管理',
+          description: 'SIEM從網絡設備、服務器和應用等各種來源收集、聚合和分析日誌數據。這種集中式日誌管理提高了系統活動的可視性，並有助於取證分析和合規報告。',
           icon: <Search className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '合規要求支持',
-          description: '幫助企業滿足各種安全合規要求，提供必要的日誌保存和審計能力。',
+          title: '合規和審計',
+          description: 'SIEM通過提供日誌監控、事件關聯和報告所需的工具和功能，幫助組織滿足監管合規要求。它有助於證明對安全政策和標準的遵守。',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         }
       ],
@@ -55,23 +55,23 @@ const SIEMSolutions = () => {
       description: 'Our SIEM solutions help enterprises centrally collect, correlate, and analyze security logs and event data from various systems, devices, and applications. Through advanced analytics and automation, we help you quickly identify potential threats and improve the efficiency of your security team.',
       benefits: [
         {
-          title: 'Comprehensive Threat Visibility',
-          description: 'Centrally collect and analyze security data from all IT assets, providing a comprehensive view of the enterprise security posture.',
+          title: 'Threat Detection',
+          description: 'SIEM (Security Information and Event Management) enables real-time monitoring and correlation of security events, helping to detect and respond to potential threats and security incidents promptly.',
           icon: <Database className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Real-time Threat Detection',
-          description: 'Monitor and analyze security events in real-time, quickly identifying abnormal activities and potential threats.',
+          title: 'Incident Response',
+          description: 'SIEM provides a centralized platform for incident response, allowing security teams to investigate and respond to security events efficiently. It helps streamline incident management processes and reduces response time.',
           icon: <Activity className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Intelligent Threat Analysis',
-          description: 'Utilize advanced analytics and machine learning techniques to improve the accuracy of threat detection and reduce false positives.',
+          title: 'Log Management',
+          description: 'SIEM collects, aggregates, and analyzes log data from various sources, such as network devices, servers, and applications. This centralized log management improves visibility into system activities and aids in forensic analysis and compliance reporting.',
           icon: <Search className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Compliance Requirement Support',
-          description: 'Help enterprises meet various security compliance requirements, providing necessary log retention and audit capabilities.',
+          title: 'Compliance and Auditing',
+          description: 'SIEM helps organizations meet regulatory compliance requirements by providing the necessary tools and capabilities for log monitoring, event correlation, and reporting. It assists in demonstrating adherence to security policies and standards.',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         }
       ],
