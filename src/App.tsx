@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import ThreatDetection from "./pages/ThreatDetection";
 import NotFound from "./pages/NotFound";
-import DataEncryption from "./pages/DataEncryption";
+import RansomwareService from "./pages/RansomwareService";
 import VulnerabilityAssessment from "./pages/VulnerabilityAssessment";
 import EmergencyResponse from "./pages/EmergencyResponse";
 import SIEMSolutions from "./pages/SIEMSolutions";
@@ -20,6 +20,8 @@ import ConfigurationAssessment from "./pages/ConfigurationAssessment";
 import PhysicalSecurity from "./pages/PhysicalSecurity";
 import AccessCardProtection from "./pages/AccessCardProtection";
 import SecurityTraining from "./pages/SecurityTraining";
+import KnowledgeCenter from "./pages/KnowledgeCenter";
+import SecurityResources from "./pages/SecurityResources";
 
 // ScrollToTop component to ensure all pages start at the top
 const ScrollToTop = () => {
@@ -45,7 +47,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/threat-detection" element={<ThreatDetection />} />
-            <Route path="/data-encryption" element={<DataEncryption />} />
+            <Route path="/ransomware-service" element={<RansomwareService />} />
             <Route path="/vulnerability-assessment" element={<VulnerabilityAssessment />} />
             <Route path="/emergency-response" element={<EmergencyResponse />} />
             <Route path="/siem-solutions" element={<SIEMSolutions />} />
@@ -56,6 +58,8 @@ const App = () => (
             <Route path="/physical-security" element={<PhysicalSecurity />} />
             <Route path="/access-card-protection" element={<AccessCardProtection />} />
             <Route path="/security-training" element={<SecurityTraining />} />
+            <Route path="/knowledge-center" element={<KnowledgeCenter />} />
+            <Route path="/security-resources" element={<SecurityResources />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

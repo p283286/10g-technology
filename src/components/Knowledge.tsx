@@ -2,6 +2,8 @@
 import React from 'react';
 import { File, ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface BlogPostProps {
   title: string;
@@ -31,6 +33,8 @@ const BlogPost = ({ title, excerpt, date, category }: BlogPostProps) => (
 );
 
 const Knowledge = () => {
+  const { language } = useLanguage();
+  
   const blogPosts: BlogPostProps[] = [
     {
       title: '如何有效防範勒索軟件攻擊',
@@ -80,9 +84,11 @@ const Knowledge = () => {
   return (
     <section id="knowledge" className="section-container">
       <div className="text-center mb-16">
-        <h2 className="mb-4">知識中心</h2>
+        <h2 className="mb-4">{language === 'zh' ? '知識中心' : 'Knowledge Center'}</h2>
         <p className="max-w-3xl mx-auto text-slate-600">
-          探索我們的安全資源庫，了解最新的網絡安全趨勢、威脅情報和最佳實踐。
+          {language === 'zh' 
+            ? '探索我們的安全資源庫，了解最新的網絡安全趨勢、威脅情報和最佳實踐。' 
+            : 'Explore our security resource library to understand the latest cybersecurity trends, threat intelligence, and best practices.'}
         </p>
       </div>
       
@@ -101,14 +107,18 @@ const Knowledge = () => {
       <div className="cyber-card p-8 bg-cyber-gradient-light">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="text-white">
-            <h3 className="text-2xl font-bold mb-2">免費安全資源</h3>
+            <h3 className="text-2xl mb-2">{language === 'zh' ? '免費安全資源' : 'Free Security Resources'}</h3>
             <p className="max-w-xl">
-              下載我們的免費安全資源，包括白皮書、電子書、模板和培訓材料，提升您的安全知識和能力。
+              {language === 'zh' 
+                ? '下載我們的免費安全資源，包括白皮書、電子書、模板和培訓材料，提升您的安全知識和能力。' 
+                : 'Download our free security resources, including white papers, eBooks, templates, and training materials to enhance your security knowledge and capabilities.'}
             </p>
           </div>
-          <Button size="lg" variant="secondary">
-            瀏覽資源庫
-          </Button>
+          <Link to="/security-resources">
+            <Button size="lg" variant="secondary">
+              {language === 'zh' ? '瀏覽資源庫' : 'Browse Resource Library'}
+            </Button>
+          </Link>
         </div>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -125,25 +135,38 @@ const Knowledge = () => {
       </div>
       
       <div className="mt-16 text-center">
-        <h3 className="text-2xl mb-6">定期安全通訊</h3>
+        <h3 className="text-2xl mb-6">{language === 'zh' ? '定期安全通訊' : 'Regular Security Newsletter'}</h3>
         <p className="max-w-2xl mx-auto mb-8 text-slate-600">
-          訂閱我們的安全通訊，定期獲取最新的安全資訊、威脅警報和防禦建議，保持安全意識。
+          {language === 'zh' 
+            ? '訂閱我們的安全通訊，定期獲取最新的安全資訊、威脅警報和防禦建議，保持安全意識。' 
+            : 'Subscribe to our security newsletter to regularly receive the latest security information, threat alerts, and defense recommendations to stay security-aware.'}
         </p>
         <div className="max-w-md mx-auto">
           <div className="flex gap-2">
             <input 
               type="email" 
-              placeholder="您的電子郵件" 
+              placeholder={language === 'zh' ? "您的電子郵件" : "Your email"} 
               className="flex-grow px-4 py-2 border border-slate-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-cyber-accent"
             />
             <Button className="rounded-l-none bg-cyber-accent hover:bg-cyber-blue-light">
-              訂閱
+              {language === 'zh' ? '訂閱' : 'Subscribe'}
             </Button>
           </div>
           <p className="text-xs text-slate-500 mt-2 text-left">
-            我們尊重您的隱私，不會濫用您的資訊。您可以隨時取消訂閱。
+            {language === 'zh' 
+              ? '我們尊重您的隱私，不會濫用您的資訊。您可以隨時取消訂閱。' 
+              : 'We respect your privacy and will not misuse your information. You can unsubscribe at any time.'}
           </p>
         </div>
+      </div>
+      
+      <div className="mt-12 text-center">
+        <Link to="/knowledge-center">
+          <Button variant="outline" size="lg" className="group">
+            {language === 'zh' ? '探索更多知識' : 'Explore More Knowledge'}
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
       </div>
     </section>
   );

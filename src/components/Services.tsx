@@ -45,7 +45,7 @@ const Services = () => {
   const services = [
     {
       icon: <Search size={32} />,
-      title: language === 'zh' ? '網絡威脅檢測與防禦' : 'Network Threat Detection and Defense',
+      title: language === 'zh' ? 'A.I. SIEM + XDR' : 'A.I. SIEM + XDR',
       description: language === 'zh' 
         ? '利用先進的AI技術，實時監控並識別潛在的網絡威脅，提供主動防禦策略。' 
         : 'Utilize advanced AI technology to monitor and identify potential cyber threats in real-time, providing proactive defense strategies.',
@@ -53,11 +53,11 @@ const Services = () => {
     },
     {
       icon: <Lock size={32} />,
-      title: language === 'zh' ? '數據加密與隱私保護' : 'Data Encryption and Privacy Protection',
+      title: language === 'zh' ? 'Ransomware急救服務' : 'Ransomware Emergency Service',
       description: language === 'zh'
-        ? '實施強大的加密解決方案，確保您的敏感數據在傳輸和存儲過程中得到全面保護。'
-        : 'Implement robust encryption solutions to ensure your sensitive data is fully protected during transmission and storage.',
-      path: '/data-encryption'
+        ? '專業的勒索軟件應急響應和數據恢復服務，幫助企業快速處理勒索軟件攻擊事件。'
+        : 'Professional ransomware emergency response and data recovery services to help enterprises quickly handle ransomware attack incidents.',
+      path: '/ransomware-service'
     },
     {
       icon: <AlertTriangle size={32} />,
@@ -162,71 +162,6 @@ const Services = () => {
             path={service.path}
           />
         ))}
-      </div>
-      
-      <div className="mt-16 text-center">
-        <h3 className="text-2xl mb-6">{language === 'zh' ? '行業解決方案' : 'Industry Solutions'}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="cyber-card p-6 bg-cyber-gradient-light">
-            <h4 className="text-white mb-4">{language === 'zh' ? '金融行業' : 'Financial Industry'}</h4>
-            <p className="text-white/90 mb-4">
-              {language === 'zh'
-                ? '針對銀行、保險和金融機構的特定安全需求，提供符合監管要求的安全解決方案。'
-                : 'Provide security solutions that meet regulatory requirements for specific security needs of banks, insurance, and financial institutions.'}
-            </p>
-            <Button 
-              variant="secondary"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {language === 'zh' ? '聯繫專家顧問' : 'Contact Expert Advisors'}
-            </Button>
-          </div>
-          
-          <div className="cyber-card p-6 bg-cyber-gradient-light">
-            <h4 className="text-white mb-4">{language === 'zh' ? '醫療健康' : 'Healthcare'}</h4>
-            <p className="text-white/90 mb-4">
-              {language === 'zh'
-                ? '保護患者敏感數據，確保醫療系統和設備的安全，滿足HIPAA等合規要求。'
-                : 'Protect sensitive patient data, ensure the security of medical systems and devices, and meet compliance requirements such as HIPAA.'}
-            </p>
-            <Button 
-              variant="secondary"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {language === 'zh' ? '聯繫專家顧問' : 'Contact Expert Advisors'}
-            </Button>
-          </div>
-          
-          <div className="cyber-card p-6 bg-cyber-gradient-light">
-            <h4 className="text-white mb-4">{language === 'zh' ? '科技行業' : 'Tech Industry'}</h4>
-            <p className="text-white/90 mb-4">
-              {language === 'zh'
-                ? '為科技企業提供數據保護、知識產權保護和開發安全的綜合解決方案。'
-                : 'Provide comprehensive solutions for data protection, intellectual property protection, and development security for technology companies.'}
-            </p>
-            <Button 
-              variant="secondary"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {language === 'zh' ? '聯繫專家顧問' : 'Contact Expert Advisors'}
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

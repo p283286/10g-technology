@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Shield, Search, Database, Activity, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -16,9 +17,9 @@ const ThreatDetection = () => {
 
   const content = {
     zh: {
-      title: '網絡威脅檢測與防禦',
+      title: 'A.I. SIEM + XDR',
       subtitle: '利用先進的AI技術，實時監控並識別潛在的網絡威脅，提供主動防禦策略。',
-      description: '我們的網絡威脅檢測與防禦解決方案採用最先進的AI技術，全天候監控您的網絡環境，識別和阻止潛在威脅，確保您的業務持續運營。',
+      description: '我們的 A.I. SIEM + XDR 解決方案採用最先進的AI技術，全天候監控您的網絡環境，識別和阻止潛在威脅，確保您的業務持續運營。',
       benefits: [
         {
           title: '實時監控',
@@ -42,7 +43,6 @@ const ThreatDetection = () => {
         }
       ],
       features: [
-        '高級入侵檢測系統（IDS）和入侵防禦系統（IPS）',
         '網絡異常行為分析與識別',
         '惡意軟件與病毒檢測',
         'DDoS攻擊預防與緩解',
@@ -53,9 +53,9 @@ const ThreatDetection = () => {
       backToServices: '返回服務列表'
     },
     en: {
-      title: 'Network Threat Detection and Defense',
+      title: 'A.I. SIEM + XDR',
       subtitle: 'Real-time monitoring and identification of potential cyber threats using advanced AI technology, providing proactive defense strategies.',
-      description: 'Our Network Threat Detection and Defense solution employs cutting-edge AI technology to monitor your network environment around the clock, identifying and blocking potential threats to ensure your business continuity.',
+      description: 'Our A.I. SIEM + XDR solution employs cutting-edge AI technology to monitor your network environment around the clock, identifying and blocking potential threats to ensure your business continuity.',
       benefits: [
         {
           title: 'Real-time Monitoring',
@@ -79,7 +79,6 @@ const ThreatDetection = () => {
         }
       ],
       features: [
-        'Advanced Intrusion Detection System (IDS) and Intrusion Prevention System (IPS)',
         'Network abnormal behavior analysis and identification',
         'Malware and virus detection',
         'DDoS attack prevention and mitigation',
