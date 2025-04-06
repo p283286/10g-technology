@@ -128,7 +128,8 @@ const SIEMSolutions = () => {
   const currentContent = language === 'zh' ? content.zh : content.en;
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
+      {/* ServicePageTemplate provides the main structure */}
       <ServicePageTemplate 
         content={content}
         language={language}
@@ -195,7 +196,7 @@ const SIEMSolutions = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
