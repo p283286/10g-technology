@@ -1,11 +1,16 @@
 
 import React, { useEffect } from 'react';
-import { Database, Activity, Search, Shield } from 'lucide-react';
+import { Database, Activity, Search, Shield, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const SIEMSolutions = () => {
   const { language } = useLanguage();
+  const navigate = useNavigate();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,8 +51,17 @@ const SIEMSolutions = () => {
         '安全合規審計支持',
         '威脅情報整合'
       ],
+      dashboardTitle: 'SIEM 儀表板示例',
+      dashboardDescription: '我們的SIEM解決方案提供全面的可視性，全程監控您的網絡安全狀態。下面是SIEM儀表板的示例，展示了如何實時跟踪、分析和管理安全事件。',
+      viewFullscreen: '查看大圖',
       cta: '聯繫我們獲取定制解決方案',
-      backToServices: '返回服務列表'
+      backToServices: '返回服務列表',
+      imageDescriptions: [
+        '安全事件概覽儀表板，顯示關鍵安全指標和事件分佈',
+        '安全日誌分析視圖，展示詳細的日誌記錄和威脅檢測',
+        '安全事件詳情頁面，顯示特定安全事件的詳細信息',
+        '系統安全審計報告，提供合規性檢查和漏洞評估'
+      ]
     },
     en: {
       title: 'SIEM Solutions',
@@ -83,8 +97,17 @@ const SIEMSolutions = () => {
         'Security compliance audit support',
         'Threat intelligence integration'
       ],
+      dashboardTitle: 'SIEM Dashboard Examples',
+      dashboardDescription: 'Our SIEM solution provides comprehensive visibility, constantly monitoring your network security status. Below are examples of SIEM dashboards that demonstrate how security events are tracked, analyzed, and managed in real-time.',
+      viewFullscreen: 'View Full Size',
       cta: 'Contact us for customized solutions',
-      backToServices: 'Back to services'
+      backToServices: 'Back to services',
+      imageDescriptions: [
+        'Security event overview dashboard showing key security metrics and event distribution',
+        'Security log analysis view displaying detailed log records and threat detection',
+        'Security event details page showing specific security event information',
+        'System security audit report providing compliance checks and vulnerability assessment'
+      ]
     }
   };
   
@@ -95,12 +118,84 @@ const SIEMSolutions = () => {
     <Shield className="h-10 w-10 text-cyber-accent" />
   ];
 
+  const dashboardImages = [
+    "/lovable-uploads/2e19bccd-a0b8-42d9-b265-3110591f559e.png",
+    "/lovable-uploads/2a29fc36-02ba-4064-b2c4-7d6304d0013f.png",
+    "/lovable-uploads/eca7515e-215f-47b2-a4c6-8c64fa72b72c.png",
+    "/lovable-uploads/72106a41-6297-405c-95fe-c8db0453e634.png"
+  ];
+
+  const currentContent = language === 'zh' ? content.zh : content.en;
+
   return (
-    <ServicePageTemplate 
-      content={content}
-      language={language}
-      icons={icons}
-    />
+    <>
+      <ServicePageTemplate 
+        content={content}
+        language={language}
+        icons={icons}
+      />
+      
+      {/* SIEM Dashboard Examples Section */}
+      <section className="py-12 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-center">{currentContent.dashboardTitle}</h2>
+            <p className="text-lg mb-10 text-center max-w-3xl mx-auto">
+              {currentContent.dashboardDescription}
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {dashboardImages.map((img, index) => (
+                <div key={index} className="flex flex-col">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="relative overflow-hidden rounded-lg shadow-md cursor-pointer hover:shadow-xl transition-all duration-300 group">
+                        <img 
+                          src={img} 
+                          alt={`SIEM Dashboard ${index + 1}`} 
+                          className="w-full h-auto object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-0 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
+                          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <Button variant="secondary" size="sm" className="flex items-center gap-1">
+                              {currentContent.viewFullscreen} <ArrowRight className="h-4 w-4" />
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-5xl w-full p-1">
+                      <img 
+                        src={img} 
+                        alt={`SIEM Dashboard ${index + 1} (Full Size)`} 
+                        className="w-full h-auto"
+                      />
+                    </DialogContent>
+                  </Dialog>
+                  <p className="mt-2 text-sm text-gray-600">{currentContent.imageDescriptions[index]}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <Button 
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    navigate('/#contact');
+                  }
+                }}
+                className="bg-cyber-warning hover:bg-cyber-accent text-cyber-dark font-semibold"
+              >
+                {currentContent.cta}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
