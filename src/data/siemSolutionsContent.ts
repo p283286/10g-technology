@@ -80,10 +80,10 @@ export const siemSolutionsContent: ContentType = {
     cta: '聯繫我們獲取定制解決方案',
     backToServices: '返回服務列表',
     imageDescriptions: [
-      '安全事件概覽儀表板，顯示關鍵安全指標和事件分佈',
-      '安全日誌分析視圖，展示詳細的日誌記錄和威脅檢測',
-      '安全事件詳情頁面，顯示特定安全事件的詳細信息',
-      '系統安全審計報告，提供合規性檢查和漏洞評估'
+      '安全漏洞檢測儀表板，展示不同嚴重級別的安全問題',
+      '威脅檢測儀表板，展示身份驗證和安全事件分析',
+      '配置審計儀表板，顯示安全基準符合性狀態',
+      'MITRE ATT&CK框架分析，追蹤高級持續威脅'
     ]
   },
   en: {
@@ -126,19 +126,19 @@ export const siemSolutionsContent: ContentType = {
     cta: 'Contact us for customized solutions',
     backToServices: 'Back to services',
     imageDescriptions: [
-      'Security event overview dashboard showing key security metrics and event distribution',
-      'Security log analysis view displaying detailed log records and threat detection',
-      'Security event details page showing specific security event information',
-      'System security audit report providing compliance checks and vulnerability assessment'
+      'Vulnerability detection dashboard showing security issues of different severity levels',
+      'Threat hunting dashboard displaying authentication and security event analysis',
+      'Configuration audit dashboard showing security baseline compliance status',
+      'MITRE ATT&CK framework analysis for tracking advanced persistent threats'
     ]
   }
 };
 
 export const siemDashboardImages = [
-  "/lovable-uploads/2e19bccd-a0b8-42d9-b265-3110591f559e.png",
-  "/lovable-uploads/2a29fc36-02ba-4064-b2c4-7d6304d0013f.png",
-  "/lovable-uploads/eca7515e-215f-47b2-a4c6-8c64fa72b72c.png",
-  "/lovable-uploads/72106a41-6297-405c-95fe-c8db0453e634.png"
+  "/lovable-uploads/e3889462-6974-4333-a6e4-a15b6fc5b6ef.png",
+  "/lovable-uploads/931c7b7b-49db-42f3-9324-083384ac9f3c.png",
+  "/lovable-uploads/92e5020e-5779-4e46-a7af-dd6d2a7dabd9.png",
+  "/lovable-uploads/36ef94ce-8937-4664-86a9-e4d422854e90.png"
 ];
 
 // Helper function to get icons based on name
