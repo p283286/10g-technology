@@ -10,7 +10,7 @@ interface ContentType {
     benefits: Array<{
       title: string;
       description: string;
-      icon: React.ReactNode;
+      iconName: string;
     }>;
     features: string[];
     dashboardTitle: string;
@@ -27,7 +27,7 @@ interface ContentType {
     benefits: Array<{
       title: string;
       description: string;
-      icon: React.ReactNode;
+      iconName: string;
     }>;
     features: string[];
     dashboardTitle: string;
@@ -48,22 +48,22 @@ export const siemSolutionsContent: ContentType = {
       {
         title: '威脅檢測',
         description: 'SIEM（安全信息和事件管理）實現對安全事件的實時監控和關聯分析，幫助及時檢測和應對潛在威脅和安全事件。',
-        icon: <Database className="h-10 w-10 text-cyber-accent" />
+        iconName: 'database'
       },
       {
         title: '事件響應',
         description: 'SIEM提供事件響應的集中平台，使安全團隊能夠高效地調查和應對安全事件。它幫助簡化事件管理流程並縮短響應時間。',
-        icon: <Activity className="h-10 w-10 text-cyber-accent" />
+        iconName: 'activity'
       },
       {
         title: '日誌管理',
         description: 'SIEM從網絡設備、服務器和應用等各種來源收集、聚合和分析日誌數據。這種集中式日誌管理提高了系統活動的可視性，並有助於取證分析和合規報告。',
-        icon: <Search className="h-10 w-10 text-cyber-accent" />
+        iconName: 'search'
       },
       {
         title: '合規和審計',
         description: 'SIEM通過提供日誌監控、事件關聯和報告所需的工具和功能，幫助組織滿足監管合規要求。它有助於證明對安全政策和標準的遵守。',
-        icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        iconName: 'shield'
       }
     ],
     features: [
@@ -94,22 +94,22 @@ export const siemSolutionsContent: ContentType = {
       {
         title: 'Threat Detection',
         description: 'SIEM (Security Information and Event Management) enables real-time monitoring and correlation of security events, helping to detect and respond to potential threats and security incidents promptly.',
-        icon: <Database className="h-10 w-10 text-cyber-accent" />
+        iconName: 'database'
       },
       {
         title: 'Incident Response',
         description: 'SIEM provides a centralized platform for incident response, allowing security teams to investigate and respond to security events efficiently. It helps streamline incident management processes and reduces response time.',
-        icon: <Activity className="h-10 w-10 text-cyber-accent" />
+        iconName: 'activity'
       },
       {
         title: 'Log Management',
         description: 'SIEM collects, aggregates, and analyzes log data from various sources, such as network devices, servers, and applications. This centralized log management improves visibility into system activities and aids in forensic analysis and compliance reporting.',
-        icon: <Search className="h-10 w-10 text-cyber-accent" />
+        iconName: 'search'
       },
       {
         title: 'Compliance and Auditing',
         description: 'SIEM helps organizations meet regulatory compliance requirements by providing the necessary tools and capabilities for log monitoring, event correlation, and reporting. It assists in demonstrating adherence to security policies and standards.',
-        icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        iconName: 'shield'
       }
     ],
     features: [
@@ -141,9 +141,25 @@ export const siemDashboardImages = [
   "/lovable-uploads/72106a41-6297-405c-95fe-c8db0453e634.png"
 ];
 
+// Helper function to get icons based on name
+export const getIconByName = (name: string) => {
+  switch (name) {
+    case 'database':
+      return <Database className="h-10 w-10 text-cyber-accent" />;
+    case 'activity':
+      return <Activity className="h-10 w-10 text-cyber-accent" />;
+    case 'search':
+      return <Search className="h-10 w-10 text-cyber-accent" />;
+    case 'shield':
+      return <Shield className="h-10 w-10 text-cyber-accent" />;
+    default:
+      return <Database className="h-10 w-10 text-cyber-accent" />;
+  }
+};
+
 export const siemIcons = [
-  <Database className="h-10 w-10 text-cyber-accent" />,
-  <Activity className="h-10 w-10 text-cyber-accent" />,
-  <Search className="h-10 w-10 text-cyber-accent" />,
-  <Shield className="h-10 w-10 text-cyber-accent" />
+  'database',
+  'activity',
+  'search',
+  'shield'
 ];

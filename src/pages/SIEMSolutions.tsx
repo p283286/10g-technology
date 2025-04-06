@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 import SIEMDashboardGallery from '@/components/SIEMDashboardGallery';
-import { siemSolutionsContent, siemIcons, siemDashboardImages } from '@/data/siemSolutionsContent';
+import { siemSolutionsContent, siemDashboardImages, siemIcons, getIconByName } from '@/data/siemSolutionsContent';
 
 const SIEMSolutions = () => {
   const { language } = useLanguage();
@@ -20,7 +20,7 @@ const SIEMSolutions = () => {
       <ServicePageTemplate 
         content={siemSolutionsContent}
         language={language}
-        icons={siemIcons}
+        icons={siemIcons.map(name => getIconByName(name))}
       />
       
       {/* SIEM Dashboard Gallery */}

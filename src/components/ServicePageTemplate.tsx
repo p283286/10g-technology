@@ -6,11 +6,13 @@ import Footer from '@/components/Footer';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
+import { getIconByName } from '@/data/siemSolutionsContent';
 
 interface Benefit {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconName?: string;
+  icon?: React.ReactNode;
   videoUrl?: string;
 }
 
@@ -91,7 +93,7 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
                   <Card key={index} className="cyber-card h-full">
                     <CardContent className="p-6">
                       <div className="mb-4">
-                        {icons[index % icons.length]}
+                        {benefit.icon || (benefit.iconName && getIconByName(benefit.iconName)) || icons[index % icons.length]}
                       </div>
                       <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                       <p className="text-slate-600">{benefit.description}</p>
