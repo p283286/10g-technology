@@ -1,7 +1,8 @@
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // Define available languages
-export type Language = 'zh' | 'en';
+export type Language = 'zh' | 'en' | 'ja';
 
 // Define the context type
 type LanguageContextType = {
@@ -91,6 +92,7 @@ const translations: Record<Language, Record<string, string>> = {
     'language': '語言',
     'language.en': 'English',
     'language.zh': '中文',
+    'language.ja': '日本語',
   },
   en: {
     // Common
@@ -164,6 +166,81 @@ const translations: Record<Language, Record<string, string>> = {
     'language': 'Language',
     'language.en': 'English',
     'language.zh': '中文',
+    'language.ja': '日本語',
+  },
+  ja: {
+    // Common
+    'company.name': '10Gテクノロジー',
+    'nav.about': '会社概要',
+    'nav.services': 'サービスとソリューション',
+    'nav.case-studies': '導入事例',
+    'nav.certifications': '専門認定',
+    'nav.knowledge': 'ナレッジセンター',
+    'nav.contact': 'お問い合わせ',
+    'cta.free-assessment': '無料セキュリティ評価',
+    
+    // Footer
+    'footer.description': 'デジタル資産とビジネスセキュリティを保護するための包括的なサイバーセキュリティソリューションプロバイダー。',
+    'footer.quick-links': 'クイックリンク',
+    'footer.services': 'サービス',
+    'footer.contact-info': '連絡先',
+    'footer.email': 'info@10gtechnology.com',
+    'footer.support-email': 'support@10gtechnology.com',
+    'footer.tel': '852-97930974',
+    'footer.privacy-policy': 'プライバシーポリシー',
+    'footer.terms': '利用規約',
+    'footer.legal': '免責事項',
+    'footer.copyright': '著作権所有',
+    
+    // News
+    'news.title': '最新ニュース',
+    'news.subtitle': '10Gテクノロジーの最新の開発、製品アップデート、業界イベントについて。',
+    'news.read-more': '続きを読む',
+    'news.view-all': 'すべてのニュースを見る',
+    'news.company': '企業ニュース',
+    'news.business': 'ビジネス展開',
+    'news.event': '今後のイベント',
+    
+    // Contact
+    'contact.title': 'お問い合わせ',
+    'contact.subtitle': 'セキュリティの懸念や専門的な相談が必要な場合は、私たちのチームがサポートいたします。',
+    'contact.direct': '直接連絡',
+    'contact.email': 'メール',
+    'contact.phone': '電話',
+    'contact.hours': '営業時間',
+    'contact.hours.weekdays': '月曜～金曜: 09:00 - 18:00',
+    'contact.hours.emergency': '緊急サポート: 24時間年中無休',
+    'contact.free-assessment': '無料セキュリティ評価',
+    'contact.free-assessment.desc': '無料のセキュリティ評価を申し込んで、組織のセキュリティリスクと改善の機会を理解しましょう。',
+    'contact.apply-now': '今すぐ申し込む',
+    'contact.message': 'メッセージを送信',
+    'contact.name': '名前',
+    'contact.your-name': 'お名前',
+    'contact.email-address': 'メールアドレス',
+    'contact.your-email': 'あなたのメールアドレス',
+    'contact.company': '会社名',
+    'contact.your-company': '会社名',
+    'contact.subject': '件名',
+    'contact.select': '選択してください...',
+    'contact.security-assessment': 'セキュリティ評価相談',
+    'contact.technical-support': '技術サポート',
+    'contact.partnership': 'パートナーシップの機会',
+    'contact.general-inquiry': '一般的なお問い合わせ',
+    'contact.message-content': 'メッセージ内容',
+    'contact.describe': 'ご要望や質問を記入してください...',
+    'contact.privacy-agreement': 'プライバシーポリシーに同意します',
+    'contact.send-message': 'メッセージを送信',
+    'contact.emergency-support': '緊急サポート',
+    'contact.emergency-help': '緊急サポートが必要ですか？',
+    'contact.emergency-desc': 'セキュリティインシデントに直面していますか？即時の専門的なアドバイスが必要ですか？私たちのセキュリティ専門家がサポートいたします。',
+    'contact.online-chat': 'オンライン相談',
+    'contact.emergency-hotline': '緊急ホットライン',
+    
+    // Language
+    'language': '言語',
+    'language.en': 'English',
+    'language.zh': '中文',
+    'language.ja': '日本語',
   }
 };
 
@@ -171,7 +248,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   // Check if browser language is available, otherwise default to zh
   const getBrowserLanguage = (): Language => {
     const browserLang = navigator.language.split('-')[0];
-    return (browserLang === 'en' || browserLang === 'zh') ? browserLang as Language : 'zh';
+    return (browserLang === 'en' || browserLang === 'zh' || browserLang === 'ja') ? browserLang as Language : 'zh';
   };
 
   // Initialize with browser language or stored preference

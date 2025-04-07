@@ -31,6 +31,12 @@ const LanguageSwitcher = () => {
           >
             {t('language.zh')}
           </DropdownMenuItem>
+          <DropdownMenuItem 
+            className={language === 'ja' ? 'bg-muted' : ''}
+            onClick={() => setLanguage('ja')}
+          >
+            {t('language.ja')}
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
