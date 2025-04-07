@@ -104,6 +104,52 @@ const ExternalPenetrationTesting = () => {
         'Firewall and perimeter defense testing report',
         'Social engineering and phishing test success rate analysis'
       ]
+    },
+    ja: {
+      title: '外部侵入テスト',
+      subtitle: '外部攻撃者の視点から組織のセキュリティ境界を評価し、悪用される可能性のある侵入ポイントを特定します。',
+      description: '当社の外部侵入テストサービスは、外部攻撃者の視点から組織のセキュリティ状況を評価します。実際のハッカー攻撃技術をシミュレートすることで、外部セキュリティ境界の弱点を特定し、効果的な修復推奨事項を提供します。',
+      benefits: [
+        {
+          title: '外部脅威シミュレーション',
+          description: '実際の外部攻撃者の行動をシミュレートして、組織の外部セキュリティ防御能力を評価し、潜在的な侵入ポイントを発見します。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '攻撃対象領域の評価',
+          description: '組織の外部攻撃対象領域を包括的に評価し、攻撃者に悪用される可能性のあるインターネットに面したサービスとシステムを特定します。',
+          icon: <Search className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '境界防御テスト',
+          description: 'ファイアウォール、侵入検出システム、ロードバランサーなど、組織のネットワーク境界防御システムの有効性をテストします。',
+          icon: <AlertTriangle className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '多層セキュリティ評価',
+          description: '多層防御戦略の有効性を評価し、ネットワークを深く侵入するために使用される可能性のあるセキュリティ脆弱性と誤構成を特定します。',
+          icon: <Monitor className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        'ネットワークサービスセキュリティテスト',
+        '公開アプリケーション評価',
+        'VPNとリモートアクセスのセキュリティ評価',
+        '境界防御システムテスト',
+        'クラウドサービスセキュリティ評価',
+        'ソーシャルエンジニアリングテスト'
+      ],
+      dashboardTitle: '外部侵入テストダッシュボード',
+      dashboardDescription: '当社の外部侵入テストダッシュボードは、組織の外部セキュリティ状況を理解するのに役立つ明確な視覚的レポートを提供します。',
+      viewFullscreen: '全画面表示',
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る',
+      imageDescriptions: [
+        'ネットワークサービスの脆弱性スキャン結果（潜在的なリスクポイントを表示）',
+        '外部攻撃対象領域のマッピング（悪用可能なシステムとサービスの特定）',
+        'ファイアウォールと境界防御テストレポート',
+        'ソーシャルエンジニアリングとフィッシングテストの成功率分析'
+      ]
     }
   };
   
@@ -122,7 +168,7 @@ const ExternalPenetrationTesting = () => {
     "/lovable-uploads/bf5e7f85-ef03-492b-b91c-bce882420398.png"
   ];
 
-  const currentContent = language === 'zh' ? content.zh : content.en;
+  const currentContent = language === 'zh' ? content.zh : (language === 'ja' ? content.ja : content.en);
 
   return (
     <>

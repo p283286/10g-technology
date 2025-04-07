@@ -29,6 +29,7 @@ interface ServicePageTemplateProps {
   content: {
     zh: ServicePageContent;
     en: ServicePageContent;
+    ja: ServicePageContent;
   };
   language: string;
   icons: React.ReactNode[];
@@ -36,7 +37,7 @@ interface ServicePageTemplateProps {
 
 const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplateProps) => {
   const navigate = useNavigate();
-  const currentContent = language === 'zh' ? content.zh : content.en;
+  const currentContent = language === 'zh' ? content.zh : (language === 'ja' ? content.ja : content.en);
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -70,7 +71,9 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
                 {currentContent.description}
               </p>
               
-              <h2 className="mb-8">{language === 'zh' ? '核心優勢' : 'Core Benefits'}</h2>
+              <h2 className="mb-8">
+                {language === 'zh' ? '核心優勢' : (language === 'ja' ? '主な利点' : 'Core Benefits')}
+              </h2>
               <div className="grid md:grid-cols-2 gap-8 mb-16">
                 {currentContent.benefits.map((benefit, index) => (
                   <Card key={index} className="cyber-card h-full">
@@ -95,7 +98,9 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
                 ))}
               </div>
               
-              <h2 className="mb-8">{language === 'zh' ? '主要功能' : 'Key Features'}</h2>
+              <h2 className="mb-8">
+                {language === 'zh' ? '主要功能' : (language === 'ja' ? '主な機能' : 'Key Features')}
+              </h2>
               <div className="mb-12">
                 <ul className="space-y-4">
                   {currentContent.features.map((feature, index) => (
@@ -111,8 +116,15 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
               </div>
               
               <div className="bg-cyber-gradient-light cyber-card p-8 text-white text-center">
-                <h3 className="text-xl mb-4">{language === 'zh' ? '需要專業建議？' : 'Need Professional Advice?'}</h3>
-                <p className="mb-6">{language === 'zh' ? '我們的安全專家可以幫助您設計適合您業務需求的安全方案。' : 'Our security experts can help you design a security solution tailored to your business needs.'}</p>
+                <h3 className="text-xl mb-4">
+                  {language === 'zh' ? '需要專業建議？' : 
+                  (language === 'ja' ? '専門家のアドバイスが必要ですか？' : 'Need Professional Advice?')}
+                </h3>
+                <p className="mb-6">
+                  {language === 'zh' ? '我們的安全專家可以幫助您設計適合您業務需求的安全方案。' : 
+                  (language === 'ja' ? '当社のセキュリティ専門家が、お客様のビジネスニーズに合わせたセキュリティソリューションの設計をサポートします。' : 
+                  'Our security experts can help you design a security solution tailored to your business needs.')}
+                </p>
               </div>
               
               <div className="mt-12 text-center">

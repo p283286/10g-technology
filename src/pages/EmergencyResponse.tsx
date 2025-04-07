@@ -85,6 +85,43 @@ const EmergencyResponse = () => {
       ],
       cta: 'Contact us for customized solutions',
       backToServices: 'Back to services'
+    },
+    ja: {
+      title: '緊急対応とインシデント管理',
+      subtitle: '迅速かつ効果的なセキュリティインシデント対応サービスを提供し、セキュリティインシデントの影響と損失を最小限に抑えます。',
+      description: '当社の緊急対応とインシデント管理チームは、24時間365日のサポートを提供し、セキュリティインシデントに迅速に対応し、状況をコントロールし、通常の業務運営を復旧するのを支援します。当社のアプローチは、組織へのセキュリティインシデントの影響を最小限に抑えるように設計されています。',
+      benefits: [
+        {
+          title: '迅速なインシデント対応',
+          description: '24時間365日のモニタリングと迅速な対応能力により、インシデント発生のゴールデンタイム内に効果的な行動を取ります。',
+          icon: <Clock className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '専門家による分析と調査',
+          description: '経験豊富なセキュリティ専門家による詳細なインシデント分析と調査により、攻撃元とメソッドを正確に特定します。',
+          icon: <Activity className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '損失制御と回復',
+          description: '効果的な損失制御とシステム回復戦略を実施し、業務運営を迅速に復旧します。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'インシデント後の分析と強化',
+          description: '総合的なインシデント後分析を提供し、セキュリティの弱点を特定し、同様のインシデントが再発しないように防御能力を強化します。',
+          icon: <AlertTriangle className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        'インシデント対応計画の策定',
+        'セキュリティインシデントの調査と分析',
+        'デジタルフォレンジック',
+        'マルウェア分析',
+        '緊急コミュニケーション管理',
+        '事業継続計画'
+      ],
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る'
     }
   };
   

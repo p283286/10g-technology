@@ -85,6 +85,43 @@ const DataEncryption = () => {
       ],
       cta: 'Contact us for customized solutions',
       backToServices: 'Back to services'
+    },
+    ja: {
+      title: 'データ暗号化とプライバシー保護',
+      subtitle: '堅牢な暗号化ソリューションを実装し、送信中および保存中の機密データが完全に保護されるようにします。',
+      description: '当社のデータ暗号化とプライバシー保護サービスは、最先端の暗号化技術を使用して、企業の機密情報と顧客データを保護します。データが転送中、保存中、または処理中であっても、データが安全で、関連するプライバシー規制に準拠していることを確保します。',
+      benefits: [
+        {
+          title: 'エンドツーエンドの暗号化',
+          description: 'データが送信元から送信先までの全送信プロセスを通じて暗号化され、不正アクセスを防止します。',
+          icon: <Lock className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '保存データの保護',
+          description: '堅牢な保存データ暗号化戦略を実装し、保存された機密情報が権限のない人員によってアクセスされないようにします。',
+          icon: <Database className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'プライバシー規制の遵守',
+          description: 'GDPRやCCPAなどのプライバシー規制に企業が準拠し、コンプライアンスリスクや潜在的な罰則を回避するのを支援します。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '暗号化キー管理',
+          description: '暗号化キーの安全な生成、保存、およびローテーションを確保する包括的なキー管理ソリューションを提供します。',
+          icon: <Key className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        'ファイルとデータベースの暗号化ソリューション',
+        'データ分類と保護ポリシー',
+        'メールとコミュニケーションの暗号化',
+        '顧客データのプライバシー保護',
+        'データ漏洩防止',
+        'データの匿名化と仮名化技術'
+      ],
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る'
     }
   };
   

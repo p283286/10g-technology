@@ -104,6 +104,52 @@ const InternalPenetrationTesting = () => {
         'SMB Signing Disabled and Authentication Vulnerabilities: Allowing attackers to perform man-in-the-middle attacks',
         'Credential Memory Leakage and Password Hash Cracking: Using GPU computing power to crack user hashes'
       ]
+    },
+    ja: {
+      title: '内部侵入テスト',
+      subtitle: '内部脅威をシミュレートし、内部セキュリティコントロールの有効性を評価し、内部セキュリティの脆弱性を発見します。',
+      description: '当社の内部侵入テストサービスは、企業内の悪意のある行為者の活動をシミュレートして、内部セキュリティ対策の有効性を評価します。このアプローチを通じて、内部関係者や侵害されたシステムに悪用される可能性のあるセキュリティの脆弱性を特定し修正するのを支援します。',
+      benefits: [
+        {
+          title: '未知のリスクを理解する',
+          description: '内部侵入テストは、内部ネットワーク、システム、アプリケーションの弱点を明らかにし、潜在的なセキュリティ脆弱性を特定するのに役立ちます。',
+          icon: <UserCheck className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'リスク軽減',
+          description: '内部侵入テストにより、組織はリスクに積極的に対処し、セキュリティ対策を実施し、不正アクセスとデータ侵害を防ぐためのコントロールを強化できます。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'コンプライアンス',
+          description: '内部侵入テストは、GDPR、PCI DSS、HIPAA、ISO 27001などのセキュリティ標準への準拠を確保することにより、組織が規制要件を満たすのに役立ちます。',
+          icon: <AlertTriangle className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'リアルタイムのパスワードクラッキング',
+          description: '強力なGPU機能を活用してリアルタイムのパスワードクラッキングテストを実行し、パスワードポリシーのセキュリティ強度を評価します。',
+          icon: <Monitor className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        '内部ネットワークセキュリティ評価',
+        '権限昇格テスト',
+        '内部システム脆弱性評価',
+        'データアクセス制御テスト',
+        '内部ソーシャルエンジニアリング評価',
+        '機密情報保護評価'
+      ],
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る',
+      dashboardTitle: '内部侵入テストレポートの例',
+      dashboardDescription: '当社の内部侵入テストは、組織内のセキュリティリスクと脆弱性を理解するのに役立つ詳細なセキュリティ評価レポートを提供します。以下は、セキュリティリスクを特定および分析する方法を示すレポート例です。',
+      viewFullscreen: '全画面表示',
+      imageDescriptions: [
+        'パスワードクラッキング分析：30分以内に45％のパスワードが解読され、1時間以内に合計6つのアカウントが侵害されたことを示しています',
+        '脆弱性詳細レポート：22の重大な脆弱性を含む53のセキュリティ脆弱性を特定しました',
+        'SMB署名の無効化と認証の脆弱性：攻撃者が中間者攻撃を実行することを可能にします',
+        '認証情報のメモリリークとパスワードハッシュクラッキング：GPU計算能力を使用してユーザーハッシュを解読します'
+      ]
     }
   };
   
@@ -114,7 +160,7 @@ const InternalPenetrationTesting = () => {
     <Monitor className="h-10 w-10 text-cyber-accent" />
   ];
 
-  const currentContent = language === 'zh' ? content.zh : content.en;
+  const currentContent = language === 'zh' ? content.zh : (language === 'ja' ? content.ja : content.en);
 
   return (
     <div className="min-h-screen flex flex-col">
