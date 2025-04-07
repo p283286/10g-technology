@@ -2,11 +2,29 @@
 import React from 'react';
 import { Shield, Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  
+  const navigateTo = (href: string) => {
+    if (href.startsWith('#')) {
+      if (window.location.pathname === '/') {
+        // On home page, scroll to the section
+        const section = document.getElementById(href.substring(1));
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // On other pages, navigate to home page with anchor
+        navigate(`/${href}`);
+      }
+    } else {
+      navigate(href);
+    }
+  };
 
   return (
     <footer className="bg-cyber-dark text-white">
@@ -14,7 +32,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <img src="https://10gtechnology.com/images/logo.png" alt="10G Technology" className="h-10" />
+              <img src="https://myip.hk/images/logo.png" alt="MyIP HK" className="h-10" />
             </div>
             <p className="text-slate-400 mb-6">
               {t('footer.description')}
@@ -38,9 +56,42 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">{t('footer.quick-links')}</h4>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-slate-400 hover:text-cyber-accent">{t('nav.about')}</a></li>
-              <li><a href="#services" className="text-slate-400 hover:text-cyber-accent">{t('nav.services')}</a></li>
-              <li><a href="#contact" className="text-slate-400 hover:text-cyber-accent">{t('nav.contact')}</a></li>
+              <li>
+                <a 
+                  href="#about" 
+                  className="text-slate-400 hover:text-cyber-accent"
+                  onClick={(e) => { 
+                    e.preventDefault(); 
+                    navigateTo('#about'); 
+                  }}
+                >
+                  {t('nav.about')}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#services" 
+                  className="text-slate-400 hover:text-cyber-accent"
+                  onClick={(e) => { 
+                    e.preventDefault(); 
+                    navigateTo('#services'); 
+                  }}
+                >
+                  {t('nav.services')}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#contact" 
+                  className="text-slate-400 hover:text-cyber-accent"
+                  onClick={(e) => { 
+                    e.preventDefault(); 
+                    navigateTo('#contact'); 
+                  }}
+                >
+                  {t('nav.contact')}
+                </a>
+              </li>
             </ul>
           </div>
           

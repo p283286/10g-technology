@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Shield, Search, AlertTriangle, Monitor } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import PenetrationTestingDashboards from '@/components/PenetrationTestingDashboards';
 
 const ExternalPenetrationTesting = () => {
   const { language } = useLanguage();
@@ -46,8 +47,17 @@ const ExternalPenetrationTesting = () => {
         '云服務安全評估',
         '社會工程測試'
       ],
+      dashboardTitle: '外部滲透測試儀表板',
+      dashboardDescription: '我們的外部滲透測試儀表板提供清晰的視覺化報告，幫助您了解組織的外部安全狀況。',
+      viewFullscreen: '查看大圖',
       cta: '聯繫我們獲取定制解決方案',
-      backToServices: '返回服務列表'
+      backToServices: '返回服務列表',
+      imageDescriptions: [
+        '網絡服務漏洞掃描結果，顯示潛在風險點',
+        '外部攻擊面映射，識別可被攻擊的系統和服務',
+        '防火牆和邊界防禦測試報告',
+        '社會工程和釣魚測試成功率分析'
+      ]
     },
     en: {
       title: 'External Penetration Testing',
@@ -83,8 +93,17 @@ const ExternalPenetrationTesting = () => {
         'Cloud service security assessment',
         'Social engineering testing'
       ],
+      dashboardTitle: 'External Penetration Testing Dashboards',
+      dashboardDescription: 'Our external penetration testing dashboards provide clear visual reports to help you understand your organization\'s external security posture.',
+      viewFullscreen: 'View Full Size',
       cta: 'Contact us for customized solutions',
-      backToServices: 'Back to services'
+      backToServices: 'Back to services',
+      imageDescriptions: [
+        'Network service vulnerability scan results showing potential risk points',
+        'External attack surface mapping identifying exploitable systems and services',
+        'Firewall and perimeter defense testing report',
+        'Social engineering and phishing test success rate analysis'
+      ]
     }
   };
   
@@ -95,12 +114,22 @@ const ExternalPenetrationTesting = () => {
     <Monitor className="h-10 w-10 text-cyber-accent" />
   ];
 
+  const currentContent = language === 'zh' ? content.zh : content.en;
+
   return (
-    <ServicePageTemplate 
-      content={content}
-      language={language}
-      icons={icons}
-    />
+    <>
+      <ServicePageTemplate 
+        content={content}
+        language={language}
+        icons={icons}
+      />
+      <PenetrationTestingDashboards
+        dashboardTitle={currentContent.dashboardTitle}
+        dashboardDescription={currentContent.dashboardDescription}
+        viewFullscreen={currentContent.viewFullscreen}
+        imageDescriptions={currentContent.imageDescriptions}
+      />
+    </>
   );
 };
 

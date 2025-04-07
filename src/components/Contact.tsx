@@ -288,7 +288,7 @@ const Contact = () => {
               className="whitespace-nowrap"
               onClick={() => window.open('https://wa.me/85297930974', '_blank')}
             >
-              {t('contact.online-chat')}
+              {language === 'zh' ? 'Whatsapp諮詢' : 'Whatsapp Consultation'}
             </Button>
             <Button 
               size="lg" 

@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -59,22 +58,6 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
               <p className="text-slate-200 mb-8 text-lg md:text-xl max-w-3xl mx-auto">
                 {currentContent.subtitle}
               </p>
-              <div className="flex justify-center">
-                <Button 
-                  size="lg" 
-                  className="bg-cyber-accent hover:bg-cyber-blue-light text-white"
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      navigate('/#contact');
-                    }
-                  }}
-                >
-                  {currentContent.cta}
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -130,29 +113,15 @@ const ServicePageTemplate = ({ content, language, icons }: ServicePageTemplatePr
               <div className="bg-cyber-gradient-light cyber-card p-8 text-white text-center">
                 <h3 className="text-xl mb-4">{language === 'zh' ? '需要專業建議？' : 'Need Professional Advice?'}</h3>
                 <p className="mb-6">{language === 'zh' ? '我們的安全專家可以幫助您設計適合您業務需求的安全方案。' : 'Our security experts can help you design a security solution tailored to your business needs.'}</p>
-                <Button 
-                  variant="secondary" 
-                  size="lg"
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      navigate('/#contact');
-                    }
-                  }}
-                >
-                  {language === 'zh' ? '聯繫專家顧問' : 'Contact Expert Advisors'}
-                </Button>
               </div>
               
               <div className="mt-12 text-center">
-                <Button 
-                  variant="outline" 
+                <button 
+                  className="px-4 py-2 border border-cyber-accent text-cyber-accent rounded hover:bg-cyber-accent hover:text-white transition-colors" 
                   onClick={() => navigate('/')}
                 >
                   {currentContent.backToServices}
-                </Button>
+                </button>
               </div>
             </div>
           </div>
