@@ -63,23 +63,50 @@ const FAQ = () => {
         question: 'Do you provide ongoing security monitoring services?',
         answer: 'Yes, we provide round-the-clock security monitoring services. Our Security Operations Center (SOC) is equipped with advanced monitoring tools and professionals who can continuously monitor your network environment to promptly detect and respond to potential threats.'
       }
+    ],
+    ja: [
+      {
+        question: '組織に必要なセキュリティサービスを特定するにはどうすればよいですか？',
+        answer: '包括的なセキュリティ評価から始めることをお勧めします。これにより、組織固有のリスクとセキュリティ要件を特定するのに役立ちます。評価結果に基づいて、専門家チームが最適なセキュリティソリューションを推奨します。無料の初期相談をスケジュールするには、お問い合わせください。'
+      },
+      {
+        question: '天機科技はどのような業界にサービスを提供していますか？',
+        answer: '金融サービス、ヘルスケア、製造、小売、教育、政府、テクノロジーなど、幅広い業界にサイバーセキュリティサービスを提供しています。当社のソリューションは、異なる業界の特定のニーズとコンプライアンス要件に応じてカスタマイズできます。'
+      },
+      {
+        question: 'セキュリティインシデントが発生した場合、どのように連絡すればよいですか？',
+        answer: '24時間365日の緊急対応サービスを提供しています。緊急ホットライン+852 97930974にお電話いただくか、emergency@10gtechnology.comにメールを送信してください。インシデント対応チームが即座にリクエストに対応します。'
+      },
+      {
+        question: 'セキュリティ評価の機密性はどのように確保されていますか？',
+        answer: 'クライアントデータの機密性を非常に重視しています。すべてのセキュリティ評価活動は厳格な機密保持契約に従い、セキュリティクリアランスを受けた専門家によって実施されます。すべての調査結果と推奨事項は暗号化されて保存され、許可された担当者のみがアクセスできます。'
+      },
+      {
+        question: 'セキュリティサービスの実装にはどれくらい時間がかかりますか？',
+        answer: '実装時間は、選択したサービスのタイプ、組織の規模、および特定の要件によって異なります。単純なセキュリティ評価は1〜2週間で完了する場合がありますが、包括的なセキュリティソリューションの実装には数ヶ月かかる場合があります。お客様のスケジュール要件を満たすプロジェクト計画を策定するために緊密に連携します。'
+      },
+      {
+        question: '継続的なセキュリティ監視サービスは提供していますか？',
+        answer: 'はい、24時間体制のセキュリティ監視サービスを提供しています。当社のセキュリティオペレーションセンター（SOC）は、高度な監視ツールと専門家を備えており、ネットワーク環境を継続的に監視して、潜在的な脅威を迅速に検出し対応することができます。'
+      }
     ]
   };
+
+  // Fallback to English if the current language is not available in faqs
+  const currentLanguageFaqs = faqs[language] || faqs.en;
 
   return (
     <section id="faq" className="section-container">
       <div className="text-center mb-16">
-        <h2 className="mb-4">{language === 'zh' ? '常見問題' : 'Frequently Asked Questions'}</h2>
+        <h2 className="mb-4">{t('faq.title')}</h2>
         <p className="max-w-3xl mx-auto text-slate-600">
-          {language === 'zh' 
-            ? '我們收集了一些客戶經常詢問的問題及解答，希望能幫助您更好地了解我們的服務。'
-            : 'We have collected some frequently asked questions and answers from our clients to help you better understand our services.'}
+          {t('faq.description')}
         </p>
       </div>
       
       <div className="max-w-3xl mx-auto">
         <Accordion type="single" collapsible className="w-full">
-          {faqs[language].map((faq, index) => (
+          {currentLanguageFaqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="text-left text-lg font-medium">
                 {faq.question}
@@ -96,7 +123,9 @@ const FAQ = () => {
         <p className="text-slate-600 mb-4">
           {language === 'zh' 
             ? '還有其他問題？請直接聯繫我們的客戶服務團隊'
-            : 'Have more questions? Please contact our customer service team directly'}
+            : language === 'ja'
+              ? '他の質問がありますか？カスタマーサービスチームに直接お問い合わせください'
+              : 'Have more questions? Please contact our customer service team directly'}
         </p>
         <div className="font-semibold text-cyber-accent">info@10gtechnology.com | +852 97930974</div>
       </div>
