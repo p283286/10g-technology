@@ -114,6 +114,14 @@ const ExternalPenetrationTesting = () => {
     <Monitor className="h-10 w-10 text-cyber-accent" />
   ];
 
+  // New images to use for the dashboards
+  const newDashboardImages = [
+    "/lovable-uploads/d61f9dcc-857a-48d2-b682-f8856e4aaae4.png",
+    "/lovable-uploads/a23de1e8-36da-4579-8d68-7e3327b001d5.png",
+    "/lovable-uploads/067ce665-5b7b-45b6-ae9d-69e0a41c246f.png",
+    "/lovable-uploads/bf5e7f85-ef03-492b-b91c-bce882420398.png"
+  ];
+
   const currentContent = language === 'zh' ? content.zh : content.en;
 
   return (
@@ -128,6 +136,7 @@ const ExternalPenetrationTesting = () => {
         dashboardDescription={currentContent.dashboardDescription}
         viewFullscreen={currentContent.viewFullscreen}
         imageDescriptions={currentContent.imageDescriptions}
+        dashboardImages={newDashboardImages}
       />
     </>
   );

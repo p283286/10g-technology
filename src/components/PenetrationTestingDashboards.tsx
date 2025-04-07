@@ -9,20 +9,24 @@ interface PenetrationTestingDashboardsProps {
   dashboardDescription: string;
   viewFullscreen: string;
   imageDescriptions: string[];
+  dashboardImages?: string[];
 }
 
 const PenetrationTestingDashboards: React.FC<PenetrationTestingDashboardsProps> = ({
   dashboardTitle,
   dashboardDescription,
   viewFullscreen,
-  imageDescriptions
+  imageDescriptions,
+  dashboardImages
 }) => {
-  const dashboardImages = [
+  const defaultImages = [
     "/lovable-uploads/66b651a2-37bf-41a1-8749-2654fe1a9701.png",
     "/lovable-uploads/3b68fee0-88ba-4849-96ff-bf88f05227b8.png",
     "/lovable-uploads/80a64615-7c0a-4b88-9789-d85c6adfca51.png", 
     "/lovable-uploads/666523c7-5e7c-44b3-baf6-b5e93fd1bd07.png"
   ];
+  
+  const imagesToDisplay = dashboardImages || defaultImages;
 
   return (
     <section className="py-12 bg-white">
@@ -34,7 +38,7 @@ const PenetrationTestingDashboards: React.FC<PenetrationTestingDashboardsProps> 
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {dashboardImages.map((img, index) => (
+            {imagesToDisplay.map((img, index) => (
               <div key={index} className="flex flex-col">
                 <Dialog>
                   <DialogTrigger asChild>
