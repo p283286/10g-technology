@@ -87,6 +87,44 @@ const SecurityTraining = () => {
       ],
       cta: 'Contact us for customized solutions',
       backToServices: 'Back to services'
+    },
+    ja: {
+      title: 'セキュリティ意識トレーニング',
+      subtitle: '従業員に包括的なセキュリティ意識トレーニングを提供し、ソーシャルエンジニアリング攻撃を防ぐための強力な人的セキュリティ防御ラインを構築します。',
+      description: '当社では、従業員がフィッシング攻撃、ソーシャルエンジニアリング、パスワードセキュリティなどの様々なサイバーセキュリティ脅威を理解し識別するのを支援する専門的なセキュリティ意識トレーニングプログラムを提供しています。対話型トレーニングとシミュレーション訓練を通じて、従業員のセキュリティ意識と対応能力を向上させます。',
+      benefits: [
+        {
+          title: '意識向上',
+          description: 'フィッシングテストは従業員のフィッシングリスクと戦術についての意識を高め、潜在的なフィッシング攻撃を識別し正しく対応できるようにします。',
+          icon: <BookOpen className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'リスク低減',
+          description: 'テストは従業員に対するフィッシング攻撃の成功率を最大90%削減し、組織に対する成功するサイバー攻撃の可能性を大幅に減少させます。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'コンプライアンス',
+          description: 'テストは組織がセキュリティ意識トレーニングのコンプライアンス要件を満たし、業界標準と規制への準拠を確保するのに役立ちます。',
+          icon: <Bell className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'フィッシングデモビデオ',
+          description: '二要素認証(2FA)を有効にしていても、ハッカーがあなたのOffice 365アカウントを盗む方法を紹介するビデオです。',
+          icon: <Video className="h-10 w-10 text-cyber-accent" />,
+          videoUrl: 'https://10gtechnology.com/videos/phishing_office_365.mp4'
+        }
+      ],
+      features: [
+        'フィッシングシミュレーショントレーニング',
+        'ソーシャルエンジニアリング防御トレーニング',
+        'パスワードセキュリティのベストプラクティス',
+        'モバイルデバイスセキュリティトレーニング',
+        'データプライバシー意識教育',
+        'カスタマイズされたセキュリティトレーニングプログラム'
+      ],
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る'
     }
   };
   

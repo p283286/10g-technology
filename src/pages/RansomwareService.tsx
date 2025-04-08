@@ -85,6 +85,43 @@ const RansomwareService = () => {
       ],
       cta: 'Contact us for emergency response',
       backToServices: 'Back to services'
+    },
+    ja: {
+      title: 'ランサムウェア緊急サービス',
+      subtitle: 'ランサムウェア攻撃インシデントを迅速に処理するための専門的な緊急対応とデータ復旧サービス。',
+      description: '当社のランサムウェア緊急サービスは、脅威の特定からシステム分離、データ復旧、事後分析まで、包括的なランサムウェア緊急対応ソリューションを提供し、企業がランサムウェア攻撃インシデント中の損失を最小限に抑え、業務運営を迅速に復旧するのを支援します。',
+      benefits: [
+        {
+          title: '迅速な対応',
+          description: '24時間365日対応の緊急対応チームが、ランサムウェア攻撃発生後可能な限り短時間での介入を保証します。',
+          icon: <Clock className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'データ復旧',
+          description: '暗号化されたファイルの復旧を最大化し、データ損失を軽減するための専門的なデータ復旧技術。',
+          icon: <FileX className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'セキュリティ保護',
+          description: '将来の攻撃を防止し、企業のセキュリティ防御能力を強化するための包括的なセキュリティ評価と強化。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'フォレンジック調査',
+          description: '攻撃の発生源と方法を特定し、企業の事後処理と報告を支援するための専門的なデジタルフォレンジック調査。',
+          icon: <Database className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        'インシデント対応と脅威の特定',
+        'システム分離と制御',
+        'データ復旧サービス',
+        'ランサムウェアの除去',
+        'インシデント調査と分析',
+        'セキュリティ強化と予防推奨事項'
+      ],
+      cta: '緊急対応についてお問い合わせください',
+      backToServices: 'サービス一覧に戻る'
     }
   };
   

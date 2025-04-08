@@ -105,6 +105,52 @@ const ThreatDetection = () => {
         'Configuration audit dashboard showing security baseline compliance status',
         'MITRE ATT&CK framework analysis for tracking advanced persistent threats'
       ]
+    },
+    ja: {
+      title: 'A.I. SIEM + XDR',
+      subtitle: '高度なAI技術を活用して潜在的なサイバー脅威をリアルタイムで監視し識別し、積極的な防御戦略を提供します。',
+      description: '当社のA.I. SIEM + XDRソリューションは、セキュリティ情報・イベント管理（SIEM）と拡張検出・応答（XDR）の強力な機能を組み合わせ、人工知能によって強化され、組織に包括的なサイバーセキュリティ保護を提供します。ディープラーニングと行動分析を通じて、当社のシステムは複雑な脅威パターンを識別し、誤検出を大幅に減少させ、より迅速な脅威検出と対応を実現します。',
+      benefits: [
+        {
+          title: '高度な脅威検出',
+          description: 'AI技術を使用して複雑な脅威パターンを識別し、従来のシステムでは見逃される可能性のある攻撃を検出します。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'インテリジェントイベント分類',
+          description: 'AIが自動的にセキュリティイベントを分析し優先順位を付け、セキュリティチームが最も重要な脅威に集中できるようにします。',
+          icon: <Search className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '行動分析と異常検出',
+          description: '通常の行動パターンを学習することで、不審なユーザーとシステム活動を識別します。',
+          icon: <Activity className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '自動化された対応',
+          description: '脅威が発生した際に即座に行動を起こす自動応答メカニズムを提供し、手動介入の必要性を減らします。',
+          icon: <AlertTriangle className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        'AI駆動の脅威検出と分析',
+        'クロスプラットフォームデータ収集と統合管理',
+        'リアルタイムのセキュリティイベント監視とアラート',
+        'インテリジェントな異常検出',
+        '自動化された対応と修復推奨',
+        '高度な脅威ハンティング機能'
+      ],
+      dashboardTitle: 'A.I. SIEM + XDRダッシュボード例',
+      dashboardDescription: '当社のA.I. SIEM + XDRソリューションは、強力なセキュリティ監視と分析機能を提供します。以下のダッシュボードは、システムが様々なサイバーセキュリティ脅威を特定し、追跡し、対応する方法を示しています。',
+      viewFullscreen: '全画面表示',
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る',
+      imageDescriptions: [
+        '異なる重大度レベルのセキュリティ問題を示す脆弱性検出ダッシュボード',
+        '認証とセキュリティイベント分析を表示する脅威ハンティングダッシュボード',
+        'セキュリティベースライン遵守状況を示す構成監査ダッシュボード',
+        '高度な持続的脅威を追跡するためのMITRE ATT&CK フレームワーク分析'
+      ]
     }
   };
 
@@ -115,7 +161,7 @@ const ThreatDetection = () => {
     <AlertTriangle className="h-10 w-10 text-cyber-accent" />
   ];
 
-  const currentContent = language === 'zh' ? content.zh : content.en;
+  const currentContent = language === 'zh' ? content.zh : (language === 'ja' ? content.ja : content.en);
 
   return (
     <div className="min-h-screen flex flex-col">

@@ -37,6 +37,23 @@ interface ContentType {
     backToServices: string;
     imageDescriptions: string[];
   };
+  ja: {
+    title: string;
+    subtitle: string;
+    description: string;
+    benefits: Array<{
+      title: string;
+      description: string;
+      iconName: string;
+    }>;
+    features: string[];
+    dashboardTitle: string;
+    dashboardDescription: string;
+    viewFullscreen: string;
+    cta: string;
+    backToServices: string;
+    imageDescriptions: string[];
+  };
 }
 
 export const siemSolutionsContent: ContentType = {
@@ -130,6 +147,52 @@ export const siemSolutionsContent: ContentType = {
       'Threat hunting dashboard displaying authentication and security event analysis',
       'Configuration audit dashboard showing security baseline compliance status',
       'MITRE ATT&CK framework analysis for tracking advanced persistent threats'
+    ]
+  },
+  ja: {
+    title: 'SIEM ソリューション',
+    subtitle: 'ネットワーク環境からセキュリティデータを一元的に収集・分析し、包括的な脅威可視性を提供するセキュリティ情報・イベント管理システム。',
+    description: '当社のSIEMソリューションは、企業が様々なシステム、デバイス、アプリケーションからセキュリティログとイベントデータを一元的に収集、関連付け、分析するのを支援します。高度な分析と自動化により、潜在的な脅威を迅速に特定し、セキュリティチームの効率性を向上させます。',
+    benefits: [
+      {
+        title: '脅威検出',
+        description: 'SIEM（セキュリティ情報・イベント管理）はセキュリティイベントのリアルタイム監視と相関分析を可能にし、潜在的な脅威やセキュリティインシデントを迅速に検出し対応するのに役立ちます。',
+        iconName: 'database'
+      },
+      {
+        title: 'インシデント対応',
+        description: 'SIEMはインシデント対応の一元的なプラットフォームを提供し、セキュリティチームがセキュリティイベントを効率的に調査し対応できるようにします。インシデント管理プロセスの合理化と応答時間の短縮に役立ちます。',
+        iconName: 'activity'
+      },
+      {
+        title: 'ログ管理',
+        description: 'SIEMはネットワークデバイス、サーバー、アプリケーションなど様々なソースからログデータを収集、集約、分析します。この一元化されたログ管理により、システム活動の可視性が向上し、フォレンジック分析とコンプライアンス報告に役立ちます。',
+        iconName: 'search'
+      },
+      {
+        title: 'コンプライアンスと監査',
+        description: 'SIEMはログモニタリング、イベント相関、レポート作成に必要なツールと機能を提供することで、組織が規制コンプライアンス要件を満たすのを支援します。セキュリティポリシーと標準への準拠を証明するのに役立ちます。',
+        iconName: 'shield'
+      }
+    ],
+    features: [
+      'ログとイベントデータの一元管理',
+      'リアルタイム脅威監視とアラート',
+      'セキュリティイベント相関分析',
+      'カスタムダッシュボードとレポート',
+      'セキュリティコンプライアンス監査サポート',
+      '脅威インテリジェンス統合'
+    ],
+    dashboardTitle: 'SIEMダッシュボード例',
+    dashboardDescription: '当社のSIEMソリューションは包括的な可視性を提供し、ネットワークセキュリティ状態を常に監視します。以下は、セキュリティイベントがリアルタイムで追跡、分析、管理される様子を示すSIEMダッシュボードの例です。',
+    viewFullscreen: '全画面表示',
+    cta: 'カスタマイズされたソリューションについてお問い合わせください',
+    backToServices: 'サービス一覧に戻る',
+    imageDescriptions: [
+      '異なる重大度レベルのセキュリティ問題を示す脆弱性検出ダッシュボード',
+      '認証とセキュリティイベント分析を表示する脅威ハンティングダッシュボード',
+      'セキュリティベースライン遵守状況を示す構成監査ダッシュボード',
+      '高度な持続的脅威を追跡するためのMITRE ATT&CK フレームワーク分析'
     ]
   }
 };

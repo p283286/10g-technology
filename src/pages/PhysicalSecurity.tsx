@@ -85,6 +85,43 @@ const PhysicalSecurity = () => {
       ],
       cta: 'Contact us for customized solutions',
       backToServices: 'Back to services'
+    },
+    ja: {
+      title: '物理的セキュリティ評価',
+      subtitle: '物理的施設のセキュリティを評価し、侵入リスクを特定し、改善のための推奨事項を提供します。',
+      description: '当社の物理的セキュリティ評価サービスは、組織の物理的セキュリティ対策を包括的に評価し、悪用される可能性のある脆弱性を特定します。アクセス制御、監視システム、物理的バリアを調査することにより、重要な資産と機密エリアの保護を強化します。',
+      benefits: [
+        {
+          title: '包括的な物理リスク評価',
+          description: '人員、プロセス、技術の側面を含む施設の物理的セキュリティリスクを体系的に評価し、潜在的なセキュリティ脆弱性を特定します。',
+          icon: <Users className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '階層型防御戦略計画',
+          description: '重要な資産を適切に保護し、不正アクセスのリスクを軽減するために、多層物理防御戦略を設計および実施します。',
+          icon: <Shield className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: 'アクセス制御システム評価',
+          description: '既存のアクセス制御システムの有効性を評価し、回避または侵害される可能性のある脆弱性を特定し、強化のための推奨事項を提供します。',
+          icon: <Search className="h-10 w-10 text-cyber-accent" />
+        },
+        {
+          title: '監視および対応能力の強化',
+          description: '物理的セキュリティ監視システムとインシデント対応能力を評価および改善して、セキュリティインシデントの適時検出および対応を確保します。',
+          icon: <Monitor className="h-10 w-10 text-cyber-accent" />
+        }
+      ],
+      features: [
+        '施設アクセス制御評価',
+        '監視システムの有効性チェック',
+        '物理的セキュリティポリシーレビュー',
+        'セキュリティ人員トレーニング評価',
+        '緊急対応計画テスト',
+        '機密エリア保護評価'
+      ],
+      cta: 'カスタマイズされたソリューションについてお問い合わせください',
+      backToServices: 'サービス一覧に戻る'
     }
   };
   
