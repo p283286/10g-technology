@@ -96,10 +96,50 @@ const About = () => {
           { icon: <Shield size={36} />, value: '1000+', label: 'Successful Client Cases' }
         ]
       }
+    },
+    ja: {
+      title: '会社概要',
+      description: '10Gテクノロジーは2010年に設立され、企業に包括的な情報セキュリティソリューションを提供することに焦点を当てた、サイバーセキュリティサービスのリーディングプロバイダーです。',
+      mission: {
+        title: '私たちの使命',
+        content: '私たちは、クライアントに最先端のサイバー保護を提供し、データ資産とビジネス運営がサイバー脅威から守られるよう努めています。今日の絶えず進化する脅威の環境において、私たちはお客様の信頼できるセキュリティパートナーです。'
+      },
+      values: {
+        title: '私たちの価値観',
+        items: [
+          {
+            title: 'プロフェッショナルな誠実さ',
+            content: '最高の倫理基準とプロフェッショナリズムですべてのクライアントにサービスを提供'
+          },
+          {
+            title: '継続的なイノベーション',
+            content: '最新のセキュリティ技術と方法を常に開発し適用'
+          },
+          {
+            title: '顧客中心主義',
+            content: 'クライアントのニーズを深く理解し、カスタマイズされたセキュリティソリューションを提供'
+          },
+          {
+            title: '協力的な成功',
+            content: 'セキュリティの課題に共同で対処するため、クライアントと長期的なパートナーシップを構築'
+          }
+        ]
+      },
+      achievements: {
+        title: '企業実績',
+        stats: [
+          { icon: <Clock size={36} />, value: '10+', label: '年の業界経験' },
+          { icon: <Users size={36} />, value: '100+', label: 'セキュリティ専門家' },
+          { icon: <Award size={36} />, value: '50+', label: '業界認証' },
+          { icon: <Shield size={36} />, value: '1000+', label: '成功したクライアント事例' }
+        ]
+      }
     }
   };
   
-  const currentContent = language === 'zh' ? content.zh : content.en;
+  const currentContent = language === 'zh' ? content.zh : 
+                         language === 'ja' ? content.ja :
+                         content.en;
 
   return (
     <section id="about" className="section-container">

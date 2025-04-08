@@ -108,7 +108,7 @@ const ConfigurationAssessment = () => {
         },
         {
           title: '継続的改善プロセス',
-          description: '構成管理の継続的な改善プロセスを確立し、環境の変化と新しい脅威の出現に伴ってセキュリティ構成が常に更新されるようにします。',
+          description: '構成管理の継続的改善プロセスを確立し、環境の変化や新たな脅威の出現に応じてセキュリティ構成が常に更新されるようにします。',
           icon: <Activity className="h-10 w-10 text-cyber-accent" />
         }
       ],

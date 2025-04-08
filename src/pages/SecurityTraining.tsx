@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { BookOpen, Shield, Bell, Video } from 'lucide-react';
+import { Users, Shield, Book, Medal } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
@@ -14,114 +14,114 @@ const SecurityTraining = () => {
   const content = {
     zh: {
       title: '安全意識培訓',
-      subtitle: '為員工提供全面的安全意識培訓，建立強大的人員安全防線，預防社會工程攻擊。',
-      description: '我們提供專業的安全意識培訓計劃，幫助您的員工了解和識別各種網絡安全威脅，如釣魚攻擊、社交工程和密碼安全等。通過互動式培訓和模擬演練，提高員工的安全意識和應對能力。',
+      subtitle: '提升員工安全意識，培養良好的安全習慣，有效預防人為安全事件。',
+      description: '我們的安全意識培訓服務針對各級員工提供定制化的安全教育，幫助他們理解網絡安全的重要性並掌握基本的安全技能。通過互動式學習和情景模擬，讓員工成為企業安全防線的重要一環。',
       benefits: [
         {
-          title: '提高意識',
-          description: '釣魚測試提高員工對釣魚風險和技術的認識，讓他們能夠識別並正確應對潛在的釣魚攻擊。',
-          icon: <BookOpen className="h-10 w-10 text-cyber-accent" />
+          title: '提高安全意識',
+          description: '幫助員工理解網絡安全的基本概念和最佳實踐，提高整體安全意識和警覺性。',
+          icon: <Users className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '降低風險',
-          description: '測試幫助將針對員工的釣魚攻擊成功率降低高達90%，顯著減少組織遭受網絡攻擊的可能性。',
+          title: '降低安全風險',
+          description: '減少人為錯誤和不安全行為導致的安全事件，如點擊釣魚郵件、使用弱密碼等。',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '合規要求',
-          description: '測試幫助組織滿足安全意識培訓的合規要求，確保符合行業標準和法規要求。',
-          icon: <Bell className="h-10 w-10 text-cyber-accent" />
+          title: '符合合規要求',
+          description: '滿足各種安全合規框架對員工安全培訓的要求，如ISO 27001、PCI DSS等。',
+          icon: <Book className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: '釣魚演示視頻',
-          description: '這段視頻展示了黑客如何竊取您的Office 365帳戶，即使您啟用了雙因素認證(2FA)。',
-          icon: <Video className="h-10 w-10 text-cyber-accent" />,
-          videoUrl: 'https://10gtechnology.com/videos/phishing_office_365.mp4'
+          title: '培養安全文化',
+          description: '在組織內建立積極的安全文化，鼓勵員工主動參與安全實踐和報告潛在威脅。',
+          icon: <Medal className="h-10 w-10 text-cyber-accent" />,
+          videoUrl: '/videos/security-culture-training.mp4'
         }
       ],
       features: [
-        '釣魚模擬訓練',
-        '社會工程防禦培訓',
-        '密碼安全最佳實踐',
-        '移動設備安全培訓',
-        '數據隱私意識教育',
-        '定制化安全培訓計劃'
+        '釣魚郵件識別培訓',
+        '密碼安全管理',
+        '社會工程學防範',
+        '安全事件報告流程',
+        '移動設備安全使用',
+        '辦公環境安全實踐'
       ],
       cta: '聯繫我們獲取定制解決方案',
       backToServices: '返回服務列表'
     },
     en: {
       title: 'Security Awareness Training',
-      subtitle: 'Provide comprehensive security awareness training for employees, building a strong human security defense line to prevent social engineering attacks.',
-      description: 'We provide professional security awareness training programs to help your employees understand and identify various cyber security threats, such as phishing attacks, social engineering, and password security. Through interactive training and simulated drills, we improve employees\' security awareness and response capabilities.',
+      subtitle: 'Enhance employee security awareness, cultivate good security habits, and effectively prevent human-caused security incidents.',
+      description: 'Our Security Awareness Training services provide customized security education for employees at all levels, helping them understand the importance of cybersecurity and master basic security skills. Through interactive learning and scenario simulations, employees become an important part of the enterprise security defense line.',
       benefits: [
         {
-          title: 'Awareness',
-          description: 'Phishing tests raise employee awareness of phishing risks and tactics, enabling them to identify and correctly respond to potential phishing attacks.',
-          icon: <BookOpen className="h-10 w-10 text-cyber-accent" />
+          title: 'Improve Security Awareness',
+          description: 'Help employees understand the basic concepts and best practices of cybersecurity, enhancing overall security awareness and vigilance.',
+          icon: <Users className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Risk Reduction',
-          description: 'Tests help to reduce staff phishing attacks up to 90%, significantly decreasing the likelihood of successful cyber attacks against your organization.',
+          title: 'Reduce Security Risks',
+          description: 'Reduce security incidents caused by human error and unsafe behavior, such as clicking on phishing emails, using weak passwords, etc.',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Compliance',
-          description: 'Tests help organizations meet compliance requirements for security awareness training, ensuring adherence to industry standards and regulations.',
-          icon: <Bell className="h-10 w-10 text-cyber-accent" />
+          title: 'Meet Compliance Requirements',
+          description: 'Satisfy employee security training requirements of various security compliance frameworks, such as ISO 27001, PCI DSS, etc.',
+          icon: <Book className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'Phishing Demo Video',
-          description: 'This video shows you how hackers steal your Office 365 account even when you have two-factor authentication (2FA) enabled.',
-          icon: <Video className="h-10 w-10 text-cyber-accent" />,
-          videoUrl: 'https://10gtechnology.com/videos/phishing_office_365.mp4'
+          title: 'Cultivate Security Culture',
+          description: 'Establish a positive security culture within the organization, encouraging employees to actively participate in security practices and report potential threats.',
+          icon: <Medal className="h-10 w-10 text-cyber-accent" />,
+          videoUrl: '/videos/security-culture-training.mp4'
         }
       ],
       features: [
-        'Phishing simulation training',
-        'Social engineering defense training',
-        'Password security best practices',
-        'Mobile device security training',
-        'Data privacy awareness education',
-        'Customized security training programs'
+        'Phishing email identification training',
+        'Password security management',
+        'Social engineering prevention',
+        'Security incident reporting process',
+        'Mobile device security usage',
+        'Office environment security practices'
       ],
       cta: 'Contact us for customized solutions',
       backToServices: 'Back to services'
     },
     ja: {
       title: 'セキュリティ意識トレーニング',
-      subtitle: '従業員に包括的なセキュリティ意識トレーニングを提供し、ソーシャルエンジニアリング攻撃を防ぐための強力な人的セキュリティ防御ラインを構築します。',
-      description: '当社では、従業員がフィッシング攻撃、ソーシャルエンジニアリング、パスワードセキュリティなどの様々なサイバーセキュリティ脅威を理解し識別するのを支援する専門的なセキュリティ意識トレーニングプログラムを提供しています。対話型トレーニングとシミュレーション訓練を通じて、従業員のセキュリティ意識と対応能力を向上させます。',
+      subtitle: '従業員のセキュリティ意識を高め、良好なセキュリティ習慣を育み、人的要因によるセキュリティインシデントを効果的に防止します。',
+      description: '当社のセキュリティ意識トレーニングサービスは、あらゆるレベルの従業員にカスタマイズされたセキュリティ教育を提供し、サイバーセキュリティの重要性を理解し、基本的なセキュリティスキルを習得するのを支援します。インタラクティブな学習とシナリオシミュレーションを通じて、従業員は企業のセキュリティ防御ラインの重要な部分になります。',
       benefits: [
         {
-          title: '意識向上',
-          description: 'フィッシングテストは従業員のフィッシングリスクと戦術についての意識を高め、潜在的なフィッシング攻撃を識別し正しく対応できるようにします。',
-          icon: <BookOpen className="h-10 w-10 text-cyber-accent" />
+          title: 'セキュリティ意識の向上',
+          description: '従業員がサイバーセキュリティの基本概念とベストプラクティスを理解し、全体的なセキュリティ意識と警戒心を高めるのを支援します。',
+          icon: <Users className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'リスク低減',
-          description: 'テストは従業員に対するフィッシング攻撃の成功率を最大90%削減し、組織に対する成功するサイバー攻撃の可能性を大幅に減少させます。',
+          title: 'セキュリティリスクの低減',
+          description: 'フィッシングメールのクリックや弱いパスワードの使用など、ヒューマンエラーや安全でない行動によって引き起こされるセキュリティインシデントを減らします。',
           icon: <Shield className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'コンプライアンス',
-          description: 'テストは組織がセキュリティ意識トレーニングのコンプライアンス要件を満たし、業界標準と規制への準拠を確保するのに役立ちます。',
-          icon: <Bell className="h-10 w-10 text-cyber-accent" />
+          title: 'コンプライアンス要件の充足',
+          description: 'ISO 27001、PCI DSSなどの各種セキュリティコンプライアンスフレームワークの従業員セキュリティトレーニング要件を満たします。',
+          icon: <Book className="h-10 w-10 text-cyber-accent" />
         },
         {
-          title: 'フィッシングデモビデオ',
-          description: '二要素認証(2FA)を有効にしていても、ハッカーがあなたのOffice 365アカウントを盗む方法を紹介するビデオです。',
-          icon: <Video className="h-10 w-10 text-cyber-accent" />,
-          videoUrl: 'https://10gtechnology.com/videos/phishing_office_365.mp4'
+          title: 'セキュリティ文化の育成',
+          description: '組織内に積極的なセキュリティ文化を確立し、従業員がセキュリティプラクティスに積極的に参加し、潜在的な脅威を報告するよう奨励します。',
+          icon: <Medal className="h-10 w-10 text-cyber-accent" />,
+          videoUrl: '/videos/security-culture-training.mp4'
         }
       ],
       features: [
-        'フィッシングシミュレーショントレーニング',
-        'ソーシャルエンジニアリング防御トレーニング',
-        'パスワードセキュリティのベストプラクティス',
-        'モバイルデバイスセキュリティトレーニング',
-        'データプライバシー意識教育',
-        'カスタマイズされたセキュリティトレーニングプログラム'
+        'フィッシングメール識別トレーニング',
+        'パスワードセキュリティ管理',
+        'ソーシャルエンジニアリング防止',
+        'セキュリティインシデント報告プロセス',
+        'モバイルデバイスセキュリティ使用',
+        'オフィス環境セキュリティプラクティス'
       ],
       cta: 'カスタマイズされたソリューションについてお問い合わせください',
       backToServices: 'サービス一覧に戻る'
@@ -129,10 +129,10 @@ const SecurityTraining = () => {
   };
   
   const icons = [
-    <BookOpen className="h-10 w-10 text-cyber-accent" />,
+    <Users className="h-10 w-10 text-cyber-accent" />,
     <Shield className="h-10 w-10 text-cyber-accent" />,
-    <Bell className="h-10 w-10 text-cyber-accent" />,
-    <Video className="h-10 w-10 text-cyber-accent" />
+    <Book className="h-10 w-10 text-cyber-accent" />,
+    <Medal className="h-10 w-10 text-cyber-accent" />
   ];
 
   return (

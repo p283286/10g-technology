@@ -12,7 +12,9 @@ const SIEMSolutions = () => {
     window.scrollTo(0, 0);
   }, []);
   
-  const currentContent = language === 'zh' ? siemSolutionsContent.zh : siemSolutionsContent.en;
+  const currentContent = language === 'zh' ? siemSolutionsContent.zh : 
+                         language === 'ja' ? siemSolutionsContent.ja : 
+                         siemSolutionsContent.en;
 
   return (
     <div className="min-h-screen flex flex-col">
