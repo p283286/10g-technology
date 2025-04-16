@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // Define available languages
@@ -93,6 +92,10 @@ const translations: Record<Language, Record<string, string>> = {
     'language.en': 'English',
     'language.zh': '中文',
     'language.ja': '日本語',
+    
+    // FAQ
+    'faq.title': '常見問題解答',
+    'faq.description': '查看我們最常被詢問的網絡安全問題和解答。如果您還有其他疑問，歡迎直接與我們聯繫。',
   },
   en: {
     // Common
@@ -167,6 +170,10 @@ const translations: Record<Language, Record<string, string>> = {
     'language.en': 'English',
     'language.zh': '中文',
     'language.ja': '日本語',
+    
+    // FAQ
+    'faq.title': 'Frequently Asked Questions',
+    'faq.description': 'Browse through our most commonly asked cybersecurity questions and answers. If you have any additional inquiries, please feel free to contact us directly.',
   },
   ja: {
     // Common
@@ -241,6 +248,10 @@ const translations: Record<Language, Record<string, string>> = {
     'language.en': 'English',
     'language.zh': '中文',
     'language.ja': '日本語',
+    
+    // FAQ
+    'faq.title': 'よくある質問',
+    'faq.description': 'サイバーセキュリティに関する最もよくある質問と回答をご覧ください。さらに質問がある場合は、お気軽にお問い合わせください。',
   }
 };
 
