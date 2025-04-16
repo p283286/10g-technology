@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MessageSquare, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,9 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-// SMTP configuration
+// Updated SMTP configuration
 const smtpConfig = {
-  server: "plesk.10gtechnology.com",
+  server: "192.168.90.4",
   port: 465,
   encryption: "ssl",
   username: "web_contact_form@10gtechnology.com",
@@ -87,9 +86,9 @@ const Contact = () => {
         ${formData.message}
       `;
       
-      // Email data for sending
+      // Updated email data for sending
       const emailData = {
-        to: "info@10gtechnology.com",
+        to: "tin@10gtechnology.com",
         from: smtpConfig.username,
         subject: `Contact Form: ${emailSubject}`,
         text: messageBody,
