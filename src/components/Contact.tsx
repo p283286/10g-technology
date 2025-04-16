@@ -5,6 +5,18 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useToast } from "@/components/ui/use-toast";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
+// SMTP configuration
+const smtpConfig = {
+  server: "plesk.10gtechnology.com",
+  port: 465,
+  encryption: "ssl",
+  username: "web_contact_form@10gtechnology.com",
+  password: "qc8--676gW",
+};
 
 const ContactInfoItem = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
   <div className="flex items-start">
@@ -63,45 +75,60 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Prepare email data for server
+      // Prepare email data
+      const emailSubject = formData.subject || 'General Inquiry';
+      const messageBody = `
+        Name: ${formData.name}
+        Email: ${formData.email}
+        ${formData.company ? `Company: ${formData.company}` : ''}
+        Subject: ${emailSubject}
+        
+        Message:
+        ${formData.message}
+      `;
+      
+      // Email data for sending
       const emailData = {
         to: "info@10gtechnology.com",
-        subject: `Contact Form: ${formData.subject || 'General Inquiry'}`,
-        name: formData.name,
-        email: formData.email,
-        company: formData.company,
-        message: formData.message,
-        smtpServer: "smtp.10gtechnology.com",
-        port: 25
+        from: smtpConfig.username,
+        subject: `Contact Form: ${emailSubject}`,
+        text: messageBody,
+        html: messageBody.replace(/\n/g, '<br>'),
+        smtp: {
+          host: smtpConfig.server,
+          port: smtpConfig.port,
+          secure: true, // use SSL
+          auth: {
+            user: smtpConfig.username,
+            pass: smtpConfig.password,
+          },
+        },
       };
       
-      // For demonstration, we'll just log the data that would be sent
-      console.log("Email would be sent with:", emailData);
+      // In a real implementation, you would send this data to your backend API
+      // to handle the actual email sending. For now, we're just logging it.
+      console.log("Sending email with configuration:", emailData);
       
-      // In a real implementation, you would make an API call to your backend
-      // const response = await fetch('/api/send-email', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(emailData),
-      // });
-      
-      // Show success toast - in production this would be after successful API response
-      toast({
-        title: language === 'zh' ? "訊息已發送" : "Message sent",
-        description: language === 'zh' ? "謝謝您的訊息！我們會盡快回覆您。" : "Thank you for your message! We will get back to you as soon as possible.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: '',
-        privacyAgreed: false
-      });
+      // Simulating a successful email send
+      setTimeout(() => {
+        // Show success toast
+        toast({
+          title: language === 'zh' ? "訊息已發送" : "Message sent",
+          description: language === 'zh' ? "謝謝您的訊息！我們會盡快回覆您。" : "Thank you for your message! We will get back to you as soon as possible.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: '',
+          privacyAgreed: false
+        });
+        
+        setIsSubmitting(false);
+      }, 1500);
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
@@ -109,7 +136,6 @@ const Contact = () => {
         description: language === 'zh' ? "發送您的訊息時出錯，請稍後再試。" : "There was an error sending your message. Please try again later.",
         variant: "destructive",
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -175,43 +201,43 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">{t('contact.name')}</label>
-                  <input 
+                  <Label htmlFor="name" className="mb-1">{t('contact.name')}</Label>
+                  <Input 
                     type="text" 
                     id="name" 
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-accent"
+                    className="focus:ring-cyber-accent"
                     placeholder={t('contact.your-name')} 
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">{t('contact.email-address')}</label>
-                  <input 
+                  <Label htmlFor="email" className="mb-1">{t('contact.email-address')}</Label>
+                  <Input 
                     type="email" 
                     id="email" 
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-accent"
+                    className="focus:ring-cyber-accent"
                     placeholder={t('contact.your-email')} 
                   />
                 </div>
               </div>
               
               <div className="mb-4">
-                <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-1">{t('contact.company')}</label>
-                <input 
+                <Label htmlFor="company" className="mb-1">{t('contact.company')}</Label>
+                <Input 
                   type="text" 
                   id="company" 
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-accent"
+                  className="focus:ring-cyber-accent"
                   placeholder={t('contact.your-company')} 
                 />
               </div>
               
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-1">{t('contact.subject')}</label>
+                <Label htmlFor="subject" className="mb-1">{t('contact.subject')}</Label>
                 <select 
                   id="subject"
                   value={formData.subject}
@@ -227,15 +253,15 @@ const Contact = () => {
               </div>
               
               <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">{t('contact.message-content')}</label>
-                <textarea 
+                <Label htmlFor="message" className="mb-1">{t('contact.message-content')}</Label>
+                <Textarea 
                   id="message" 
                   rows={5} 
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-accent"
+                  className="focus:ring-cyber-accent"
                   placeholder={t('contact.describe')} 
-                ></textarea>
+                />
               </div>
               
               <div className="flex justify-between items-center">
