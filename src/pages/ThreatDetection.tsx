@@ -12,10 +12,11 @@ const ThreatDetection = () => {
     window.scrollTo(0, 0);
   }, []);
   
+  // Updated to use lovable-uploads images instead of non-existent /images/ folder
   const dashboardImages = [
-    '/images/threat-dashboard-1.png',
-    '/images/threat-dashboard-2.png',
-    '/images/threat-dashboard-3.png',
+    '/lovable-uploads/2a29fc36-02ba-4064-b2c4-7d6304d0013f.png',
+    '/lovable-uploads/2e19bccd-a0b8-42d9-b265-3110591f559e.png',
+    '/lovable-uploads/36ef94ce-8937-4664-86a9-e4d422854e90.png',
   ];
   
   const content = {

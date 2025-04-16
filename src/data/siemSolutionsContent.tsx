@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Activity, AlertTriangle, BarChart, Clock, Database, Eye, FileSearch, Monitor, Search, Shield } from 'lucide-react';
 
@@ -168,10 +167,10 @@ export const siemSolutionsContent: ContentType = {
 };
 
 export const siemDashboardImages = [
-  '/images/siem-dashboard-1.png',
-  '/images/siem-dashboard-2.png',
-  '/images/siem-dashboard-3.png',
-  '/images/siem-dashboard-4.png',
+  '/lovable-uploads/931c7b7b-49db-42f3-9324-083384ac9f3c.png',
+  '/lovable-uploads/92e5020e-5779-4e46-a7af-dd6d2a7dabd9.png',
+  '/lovable-uploads/e3889462-6974-4333-a6e4-a15b6fc5b6ef.png',
+  '/lovable-uploads/eca7515e-215f-47b2-a4c6-8c64fa72b72c.png',
 ];
 
 export const siemIcons = ['eye', 'alertTriangle', 'clock', 'fileSearch', 'barChart', 'database', 'shield', 'monitor', 'activity', 'search'];
