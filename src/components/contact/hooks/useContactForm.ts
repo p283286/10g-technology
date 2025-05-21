@@ -57,6 +57,32 @@ export const useContactForm = () => {
     return true;
   };
   
+  const sendEmail = async (emailData: any) => {
+    try {
+      // For actual implementation, you would use a service like EmailJS, Sendgrid, or a custom backend API
+      // This is a placeholder for the actual email sending logic
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...emailData,
+          smtpConfig
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+      
+      return await response.json();
+    } catch (error) {
+      console.error('Error sending email:', error);
+      throw error;
+    }
+  };
+  
   const prepareEmailData = () => {
     const emailSubject = formData.subject || 'General Inquiry';
     const messageBody = `
@@ -75,15 +101,6 @@ export const useContactForm = () => {
       subject: `Contact Form: ${emailSubject}`,
       text: messageBody,
       html: messageBody.replace(/\n/g, '<br>'),
-      smtp: {
-        host: smtpConfig.server,
-        port: smtpConfig.port,
-        secure: true, // use SSL
-        auth: {
-          user: smtpConfig.username,
-          pass: smtpConfig.password,
-        },
-      },
     };
   };
   
@@ -100,12 +117,20 @@ export const useContactForm = () => {
       // Prepare email data
       const emailData = prepareEmailData();
       
-      // In a real implementation, you would send this data to your backend API
-      console.log("Sending email with configuration:", emailData);
+      console.log("Attempting to send email with configuration:", { 
+        ...emailData, 
+        smtp: { 
+          ...smtpConfig, 
+          password: '********' // Hide password in logs
+        } 
+      });
       
-      // Simulating a successful email send
+      // For development/testing, we'll simulate successful sending
+      // In production, uncomment the following line to actually send the email
+      // await sendEmail(emailData);
+      
+      // Simulating a successful email send for now
       setTimeout(() => {
-        // Show success toast
         toast({
           title: language === 'zh' ? "訊息已發送" : "Message sent",
           description: language === 'zh' ? "謝謝您的訊息！我們會盡快回覆您。" : "Thank you for your message! We will get back to you as soon as possible.",
