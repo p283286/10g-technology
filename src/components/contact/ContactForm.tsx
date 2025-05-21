@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 
 // SMTP configuration
 const smtpConfig = {
-  server: "192.168.90.4",
+  server: "mail.10gtechnology.com",
   port: 465,
   encryption: "ssl",
   username: "web_contact_form@10gtechnology.com",
