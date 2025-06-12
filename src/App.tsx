@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -9,8 +10,6 @@ import SIEMSolutions from "./pages/SIEMSolutions";
 import TeamViewerReplacement from "./pages/TeamViewerReplacement";
 import VulnerabilityAssessment from "./pages/VulnerabilityAssessment";
 import EmergencyResponse from "./pages/EmergencyResponse";
-import InternalPenetration from "./pages/InternalPenetration";
-import ExternalPenetration from "./pages/ExternalPenetration";
 import VulnerabilityScanning from "./pages/VulnerabilityScanning";
 import ConfigurationAssessment from "./pages/ConfigurationAssessment";
 import PhysicalSecurity from "./pages/PhysicalSecurity";
@@ -33,8 +32,6 @@ const App = () => (
             <Route path="/teamviewer-replacement" element={<TeamViewerReplacement />} />
             <Route path="/vulnerability-assessment" element={<VulnerabilityAssessment />} />
             <Route path="/emergency-response" element={<EmergencyResponse />} />
-            <Route path="/internal-penetration" element={<InternalPenetration />} />
-            <Route path="/external-penetration" element={<ExternalPenetration />} />
             <Route path="/vulnerability-scanning" element={<VulnerabilityScanning />} />
             <Route path="/configuration-assessment" element={<ConfigurationAssessment />} />
             <Route path="/physical-security" element={<PhysicalSecurity />} />
