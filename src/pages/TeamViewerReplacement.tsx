@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Monitor, Shield, Users, Video, Clock, Database, Key, Eye } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { Card, CardContent } from '@/components/ui/card';
 
 const TeamViewerReplacement = () => {
   const { language } = useLanguage();
@@ -176,6 +177,45 @@ const TeamViewerReplacement = () => {
     <Eye className="h-10 w-10 text-cyber-accent" />
   ];
 
+  const interfaceImages = [
+    {
+      src: "/lovable-uploads/510b6215-0659-46a1-ba71-a9c3b33e301c.png",
+      title: language === 'zh' ? '安全設定與雙重認證' : 
+             language === 'ja' ? 'セキュリティ設定と二要素認証' : 
+             'Security Settings & Two-Factor Authentication',
+      description: language === 'zh' ? '完整的權限控制和2FA設定，支援Google、Microsoft、Telegram驗證器' : 
+                   language === 'ja' ? '包括的な権限制御と2FA設定、Google、Microsoft、Telegram認証器をサポート' : 
+                   'Comprehensive permission controls and 2FA setup with Google, Microsoft, Telegram authenticator support'
+    },
+    {
+      src: "/lovable-uploads/9151652c-81d0-46ea-b35a-5624d15b8ed9.png",
+      title: language === 'zh' ? 'H.265視頻壓縮技術' : 
+             language === 'ja' ? 'H.265ビデオ圧縮技術' : 
+             'H.265 Video Compression Technology',
+      description: language === 'zh' ? '先進的H.265編解碼器設定，提供最佳畫質與頻寬效率' : 
+                   language === 'ja' ? '先進的なH.265コーデック設定、最高の画質と帯域幅効率を提供' : 
+                   'Advanced H.265 codec settings providing optimal video quality and bandwidth efficiency'
+    },
+    {
+      src: "/lovable-uploads/8ccb3019-5c40-4fbc-a90b-8cf75d119404.png",
+      title: language === 'zh' ? '自動會話錄製功能' : 
+             language === 'ja' ? '自動セッション記録機能' : 
+             'Automatic Session Recording',
+      description: language === 'zh' ? '自動錄製所有進出會話，防止數據丟失，提供完整審計追蹤' : 
+                   language === 'ja' ? 'すべての受信および送信セッションを自動記録、データ損失を防止し、完全な監査証跡を提供' : 
+                   'Automatically record all incoming and outgoing sessions to prevent data loss and provide complete audit trails'
+    },
+    {
+      src: "/lovable-uploads/d6512691-66e6-4c52-afee-c798cc07b092.png",
+      title: language === 'zh' ? '直觀的設備管理介面' : 
+             language === 'ja' ? '直感的なデバイス管理インターフェース' : 
+             'Intuitive Device Management Interface',
+      description: language === 'zh' ? '簡潔易用的遠程桌面管理介面，支援多設備同時連接與監控' : 
+                   language === 'ja' ? 'シンプルで使いやすいリモートデスクトップ管理インターフェース、マルチデバイスの同時接続と監視をサポート' : 
+                   'Clean and user-friendly remote desktop management interface supporting multi-device simultaneous connections and monitoring'
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <ServicePageTemplate 
@@ -184,45 +224,87 @@ const TeamViewerReplacement = () => {
         icons={icons}
       />
       
+      {/* Interface Gallery Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-6">
+                {language === 'zh' ? '軟體介面展示' : 
+                 language === 'ja' ? 'ソフトウェアインターフェースの展示' : 
+                 'Software Interface Showcase'}
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                {language === 'zh' ? '體驗我們直觀、功能豐富的遠程桌面解決方案介面，展示完整的安全設定、壓縮技術、錄製功能和設備管理功能。' : 
+                 language === 'ja' ? '直感的で機能豊富なリモートデスクトップソリューションのインターフェースを体験し、完全なセキュリティ設定、圧縮技術、記録機能、デバイス管理機能を展示します。' : 
+                 'Experience our intuitive, feature-rich remote desktop solution interface showcasing comprehensive security settings, compression technology, recording capabilities, and device management features.'}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {interfaceImages.map((image, index) => (
+                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={image.src} 
+                      alt={image.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-slate-800">
+                      {image.title}
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      {image.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Additional section showcasing the interface */}
       <section className="py-12 bg-white">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
-              {language === 'zh' ? '直觀的遠程桌面介面' : 
-               language === 'ja' ? '直感的なリモートデスクトップインターフェース' : 
-               'Intuitive Remote Desktop Interface'}
+              {language === 'zh' ? '為什麼選擇我們的解決方案？' : 
+               language === 'ja' ? 'なぜ私たちのソリューションを選ぶのか？' : 
+               'Why Choose Our Solution?'}
             </h2>
             <p className="text-lg mb-10">
-              {language === 'zh' ? '簡潔易用的介面設計，支援多設備管理和安全連接配置。' : 
-               language === 'ja' ? 'シンプルで使いやすいインターフェースデザイン、マルチデバイス管理と安全な接続設定をサポート。' : 
-               'Clean and user-friendly interface design supporting multi-device management and secure connection configuration.'}
+              {language === 'zh' ? '與TeamViewer相比，我們提供更經濟實惠的企業級遠程桌面解決方案，無用戶數量限制。' : 
+               language === 'ja' ? 'TeamViewerと比較して、ユーザー数制限なしでより経済的な企業グレードのリモートデスクトップソリューションを提供します。' : 
+               'Compared to TeamViewer, we offer a more cost-effective enterprise-grade remote desktop solution with no user limitations.'}
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="cyber-card p-6">
                 <h3 className="text-xl font-bold mb-4">
-                  {language === 'zh' ? '安全設定' : 
-                   language === 'ja' ? 'セキュリティ設定' : 
-                   'Security Settings'}
+                  {language === 'zh' ? '成本優勢' : 
+                   language === 'ja' ? 'コスト優位性' : 
+                   'Cost Advantage'}
                 </h3>
                 <p className="text-slate-600">
-                  {language === 'zh' ? '完整的權限控制、雙重認證配置和密碼管理功能。' : 
-                   language === 'ja' ? '包括的な権限制御、二要素認証設定、パスワード管理機能。' : 
-                   'Comprehensive permission controls, 2FA configuration, and password management features.'}
+                  {language === 'zh' ? '固定月費支援無限用戶，比傳統按用戶付費模式節省高達80%成本。' : 
+                   language === 'ja' ? '固定月額で無制限ユーザーをサポートし、従来のユーザー課金モデルよりも最大80%のコスト削減。' : 
+                   'Fixed monthly fee supporting unlimited users, saving up to 80% compared to traditional per-user pricing models.'}
                 </p>
               </div>
               
               <div className="cyber-card p-6">
                 <h3 className="text-xl font-bold mb-4">
-                  {language === 'zh' ? '設備管理' : 
-                   language === 'ja' ? 'デバイス管理' : 
-                   'Device Management'}
+                  {language === 'zh' ? '企業級安全' : 
+                   language === 'ja' ? 'エンタープライズグレードのセキュリティ' : 
+                   'Enterprise-Grade Security'}
                 </h3>
                 <p className="text-slate-600">
-                  {language === 'zh' ? '統一管理所有遠程設備，支援快速連接和狀態監控。' : 
-                   language === 'ja' ? 'すべてのリモートデバイスを統一管理、迅速な接続と状態監視をサポート。' : 
-                   'Unified management of all remote devices with quick connection and status monitoring support.'}
+                  {language === 'zh' ? '專屬伺服器部署，完整數據隔離，多重認證保護，符合企業安全合規要求。' : 
+                   language === 'ja' ? '専用サーバー展開、完全なデータ分離、多要素認証保護、企業セキュリティコンプライアンス要件に適合。' : 
+                   'Dedicated server deployment, complete data isolation, multi-factor authentication protection, meeting enterprise security compliance requirements.'}
                 </p>
               </div>
             </div>
