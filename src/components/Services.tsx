@@ -2,7 +2,7 @@
 import React from 'react';
 import { 
   Shield, Search, Lock, AlertTriangle, Activity, 
-  Database, UserCheck, File, Monitor, Users, Key, BookOpen
+  Database, UserCheck, File, Monitor, Users, Key, BookOpen, Video
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -44,12 +44,12 @@ const Services = () => {
   
   const services = [
     {
-      icon: <Search size={32} />,
-      title: language === 'zh' ? 'A.I. SIEM + XDR' : 'A.I. SIEM + XDR',
+      icon: <Monitor size={32} />,
+      title: language === 'zh' ? 'TeamViewer替代方案' : 'TeamViewer Replacement',
       description: language === 'zh' 
-        ? '利用先進的AI技術，實時監控並識別潛在的網絡威脅，提供主動防禦策略。' 
-        : 'Utilize advanced AI technology to monitor and identify potential cyber threats in real-time, providing proactive defense strategies.',
-      path: '/threat-detection'
+        ? '超低成本的遠程桌面解決方案，固定月費無限用戶，支援Google/Microsoft/Telegram雙重認證，H.265視頻壓縮技術，專屬中國頻寬伺服器，保護企業隱私，支援會話錄製防止數據丟失。' 
+        : 'Ultra-low cost remote desktop solution with fixed monthly pricing for unlimited users. Features 2FA with Google/Microsoft/Telegram authenticators, H.265 video compression, dedicated server with China bandwidth, privacy protection, and session recording to prevent data loss.',
+      path: '/teamviewer-replacement'
     },
     {
       icon: <Lock size={32} />,
