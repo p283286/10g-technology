@@ -34,7 +34,7 @@ const App = () => (
             <Route path="/emergency-response" element={<EmergencyResponse />} />
             <Route path="/vulnerability-scanning" element={<VulnerabilityScanning />} />
             <Route path="/configuration-assessment" element={<ConfigurationAssessment />} />
-            <Route path="/physical-security" element={<PhysicalSecurity />} />
+            <Route path="/protection-of-critical-infrastructures" element={<PhysicalSecurity />} />
             <Route path="/access-card-protection" element={<AccessCardProtection />} />
             <Route path="/security-training" element={<SecurityTraining />} />
             <Route path="/ransomware-service" element={<RansomwareService />} />

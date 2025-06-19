@@ -54,7 +54,7 @@ const Services = () => {
     },
     {
       icon: <Lock size={32} />,
-      title: language === 'zh' ? 'Ransomware急救服務' : language === 'ja' ? 'Ransomware緊急サービス' : 'Ransomware Emergency Service',
+      title: language === 'zh' ? 'Ransomware急救服務' : language === 'ja' ? 'Ransomware緊急服務' : 'Ransomware Emergency Service',
       description: language === 'zh'
         ? '專業的勒索軟件應急響應和數據恢復服務，幫助企業快速處理勒索軟件攻擊事件。'
         : language === 'ja'
@@ -140,7 +140,7 @@ const Services = () => {
         : language === 'ja'
         ? '侵入テスト、脆弱性スキャン、SIEM監視、ログストレージ、セキュリティ意識トレーニングを含む包括的なコンプライアンスサービススイートで、企業が政府規制要件を満たすのを支援します。'
         : 'Comprehensive compliance service suite including penetration testing, vulnerability scanning, SIEM monitoring, log storage, and security awareness training to help enterprises meet government regulatory requirements.',
-      path: '/physical-security'
+      path: '/protection-of-critical-infrastructures'
     },
     {
       icon: <Key size={32} />,
