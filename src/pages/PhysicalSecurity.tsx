@@ -15,7 +15,22 @@ const PhysicalSecurity = () => {
     zh: {
       title: '保護關鍵基礎設施（電腦系統）條例',
       subtitle: '全面合規服務套件，幫助企業符合政府法規要求，保護關鍵基礎設施安全。',
-      description: '我們提供完整的合規服務套件，包括滲透測試、漏洞掃描、SIEM監控、日誌存儲和安全意識培訓等服務，幫助企業全面符合《保護關鍵基礎設施（電腦系統）條例》的要求，確保關鍵基礎設施的網絡安全。',
+      description: `保護關鍵基礎設施（電腦系統）條例已於2025年3月19日獲香港立法會通過，預計將於2026年1月1日生效。
+
+該條例專注於保護關鍵基礎設施，將使香港與全球趨勢保持一致，即對網絡安全和營運韌性的監管審查和要求日益嚴格，正如澳洲、歐盟和英國等其他司法管轄區所見。
+
+該條例將規管指定的關鍵基礎設施營運商及其被指定為關鍵電腦系統的電腦系統。它還將設立專員辦公室來監督和執行新制度（預計在2026年第一季度內）。
+
+關鍵定義：
+關鍵基礎設施（CI）– 對社會和經濟運作至關重要的系統、設施和資產，分為兩個類別：
+
+第一類：在香港提供基本服務的基礎設施，涵蓋以下指定行業：能源、資訊科技、銀行和金融服務、航空運輸、陸路運輸、海事運輸、醫療服務，以及電訊和廣播服務。
+
+第二類：任何其他基礎設施，其損壞、功能喪失或數據洩露可能阻礙或以其他方式重大影響香港關鍵社會或經濟活動的維持。政府已表示主要體育和表演場地、研發園區為此類別基礎設施的例子。
+
+排除項目：該條例不適用於政府營運的某些基本基礎設施/服務，例如供水、排水和緊急救援。
+
+我們提供完整的合規服務套件，包括滲透測試、漏洞掃描、SIEM監控、日誌存儲和安全意識培訓等服務，幫助企業全面符合該條例的要求，確保關鍵基礎設施的網絡安全。`,
       benefits: [
         {
           title: '全面合規評估',
@@ -66,7 +81,22 @@ const PhysicalSecurity = () => {
     en: {
       title: 'Protection of Critical Infrastructures (Computer Systems) Bill',
       subtitle: 'Comprehensive compliance service suite to help enterprises meet government regulatory requirements and protect critical infrastructure security.',
-      description: 'We provide a complete compliance service suite including penetration testing, vulnerability scanning, SIEM monitoring, log storage, and security awareness training to help enterprises fully comply with the Protection of Critical Infrastructures (Computer Systems) Bill requirements, ensuring cybersecurity of critical infrastructures.',
+      description: `The Protection of Critical Infrastructure (Computer System) Ordinance was passed by the Hong Kong Legislative Council on 19 March 2025. It is expected to take effect on 1 January 2026.
+
+The Ordinance focuses on protecting critical infrastructure, and will bring Hong Kong in line with the global trend of increasing regulatory scrutiny of and requirements for cybersecurity and operational resilience, as seen in other jurisdictions such as Australia, the EU, and the UK.
+
+The Ordinance will regulate designated Critical Infrastructure Operators and their computer systems that have been designated as Critical Computer Systems. It will also establish a Commissioner's Office to oversee and enforce the new regime (expected within the first quarter of 2026).
+
+Key defined terms for the Ordinance:
+Critical Infrastructure ("CI") – systems, facilities, and assets that are vital for the functioning of society and the economy, in the following two categories:
+
+Category 1: Infrastructure for delivering essential services in Hong Kong in the following specified sectors: energy, information technology, banking and financial services, air transport, land transport, maritime transport, health services, and telecommunications and broadcasting services.
+
+Category 2: Any other infrastructure, the damage, loss of functionality or data leakage of which may hinder or otherwise substantially affect the maintenance of critical societal or economic activities in Hong Kong. The Government has stated major sports and performance venues, research and development parks as being examples of infrastructure in this category.
+
+Excluded: The Ordinance does not apply to certain essential infrastructure/services that are operated by the government – e.g. water supply, drainage and emergency relief.
+
+We provide a complete compliance service suite including penetration testing, vulnerability scanning, SIEM monitoring, log storage, and security awareness training to help enterprises fully comply with the Ordinance requirements, ensuring cybersecurity of critical infrastructures.`,
       benefits: [
         {
           title: 'Comprehensive Compliance Assessment',
@@ -117,7 +147,22 @@ const PhysicalSecurity = () => {
     ja: {
       title: '重要インフラ（コンピュータシステム）保護法',
       subtitle: '政府規制要件を満たし、重要インフラのセキュリティを保護するための包括的なコンプライアンスサービススイート。',
-      description: '侵入テスト、脆弱性スキャン、SIEM監視、ログストレージ、セキュリティ意識トレーニングを含む完全なコンプライアンスサービススイートを提供し、企業が重要インフラ（コンピュータシステム）保護法の要件を完全に満たし、重要インフラのサイバーセキュリティを確保します。',
+      description: `重要インフラ（コンピュータシステム）保護条例は、2025年3月19日に香港立法会で可決されました。2026年1月1日に施行される予定です。
+
+この条例は重要インフラの保護に焦点を当て、オーストラリア、EU、英国などの他の法域で見られるように、サイバーセキュリティと運用レジリエンスに対する規制監視と要件の増加という世界的傾向に香港を合わせるものです。
+
+この条例は、指定された重要インフラ事業者とその重要コンピュータシステムとして指定されたコンピュータシステムを規制します。また、新体制を監督・執行するための専門委員会事務所を設立します（2026年第1四半期内に予定）。
+
+条例の主要な定義用語：
+重要インフラ（CI）– 社会と経済の機能にとって重要なシステム、施設、資産で、以下の2つのカテゴリーに分類されます：
+
+カテゴリー1：香港で必須サービスを提供するインフラで、以下の指定分野をカバーします：エネルギー、情報技術、銀行・金融サービス、航空輸送、陸上輸送、海上輸送、医療サービス、通信・放送サービス。
+
+カテゴリー2：その他のインフラで、損傷、機能喪失、またはデータ漏洩が香港の重要な社会的または経済的活動の維持を妨げるか、その他大幅に影響を与える可能性があるもの。政府は、主要なスポーツ・パフォーマンス会場、研究開発パークをこのカテゴリーのインフラの例として挙げています。
+
+除外項目：この条例は、政府が運営する特定の必須インフラ/サービス（例：給水、排水、緊急救援）には適用されません。
+
+私たちは、侵入テスト、脆弱性スキャン、SIEM監視、ログストレージ、セキュリティ意識トレーニングを含む完全なコンプライアンスサービススイートを提供し、企業がこの条例の要件を完全に満たし、重要インフラのサイバーセキュリティを確保することを支援します。`,
       benefits: [
         {
           title: '包括的なコンプライアンス評価',
