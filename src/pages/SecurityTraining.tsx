@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Users, Shield, Book, Medal } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -36,7 +35,7 @@ const SecurityTraining = () => {
           title: '培養安全文化',
           description: '在組織內建立積極的安全文化，鼓勵員工主動參與安全實踐和報告潛在威脅。',
           icon: <Medal className="h-10 w-10 text-cyber-accent" />,
-          videoUrl: '/videos/security-culture-training.mp4'
+          videoUrl: 'https://myip.hk/videos/Phishing.mp4'
         }
       ],
       features: [
@@ -74,7 +73,7 @@ const SecurityTraining = () => {
           title: 'Cultivate Security Culture',
           description: 'Establish a positive security culture within the organization, encouraging employees to actively participate in security practices and report potential threats.',
           icon: <Medal className="h-10 w-10 text-cyber-accent" />,
-          videoUrl: '/videos/security-culture-training.mp4'
+          videoUrl: 'https://myip.hk/videos/Phishing.mp4'
         }
       ],
       features: [
@@ -112,7 +111,7 @@ const SecurityTraining = () => {
           title: 'セキュリティ文化の育成',
           description: '組織内に積極的なセキュリティ文化を確立し、従業員がセキュリティプラクティスに積極的に参加し、潜在的な脅威を報告するよう奨励します。',
           icon: <Medal className="h-10 w-10 text-cyber-accent" />,
-          videoUrl: '/videos/security-culture-training.mp4'
+          videoUrl: 'https://myip.hk/videos/Phishing.mp4'
         }
       ],
       features: [
