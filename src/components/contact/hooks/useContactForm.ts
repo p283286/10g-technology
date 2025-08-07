@@ -125,29 +125,25 @@ export const useContactForm = () => {
         } 
       });
       
-      // For development/testing, we'll simulate successful sending
-      // In production, uncomment the following line to actually send the email
-      // await sendEmail(emailData);
+      // Actually send the email
+      await sendEmail(emailData);
       
-      // Simulating a successful email send for now
-      setTimeout(() => {
-        toast({
-          title: language === 'zh' ? "訊息已發送" : "Message sent",
-          description: language === 'zh' ? "謝謝您的訊息！我們會盡快回覆您。" : "Thank you for your message! We will get back to you as soon as possible.",
-        });
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          subject: '',
-          message: '',
-          privacyAgreed: false
-        });
-        
-        setIsSubmitting(false);
-      }, 1500);
+      toast({
+        title: language === 'zh' ? "訊息已發送" : "Message sent",
+        description: language === 'zh' ? "謝謝您的訊息！我們會盡快回覆您。" : "Thank you for your message! We will get back to you as soon as possible.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: '',
+        privacyAgreed: false
+      });
+      
+      setIsSubmitting(false);
     } catch (error) {
       console.error("Error sending email:", error);
       toast({

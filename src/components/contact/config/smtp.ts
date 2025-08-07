@@ -1,7 +1,7 @@
 
 // SMTP configuration
 export const smtpConfig = {
-  server: "mail.10gtechnology.com",
+  server: "192.168.90.4",
   port: 465,
   encryption: "ssl",
   username: "web_contact_form@10gtechnology.com",
