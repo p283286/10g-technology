@@ -114,41 +114,38 @@ export const useContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Prepare email data
-      const emailData = prepareEmailData();
+      // Create mailto link
+      const emailSubject = formData.subject || 'General Inquiry';
+      const messageBody = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A${formData.company ? `Company: ${formData.company}%0D%0A` : ''}Subject: ${emailSubject}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
       
-      console.log("Attempting to send email with configuration:", { 
-        ...emailData, 
-        smtp: { 
-          ...smtpConfig, 
-          password: '********' // Hide password in logs
-        } 
-      });
+      const mailtoLink = `mailto:tin@10gtechnology.com?subject=Contact Form: ${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(messageBody.replace(/%0D%0A/g, '\n'))}`;
       
-      // Actually send the email
-      await sendEmail(emailData);
+      // Open user's email client
+      window.location.href = mailtoLink;
       
       toast({
-        title: language === 'zh' ? "訊息已發送" : "Message sent",
-        description: language === 'zh' ? "謝謝您的訊息！我們會盡快回覆您。" : "Thank you for your message! We will get back to you as soon as possible.",
+        title: language === 'zh' ? "郵件客戶端已開啟" : "Email client opened",
+        description: language === 'zh' ? "請在您的郵件客戶端中發送郵件。" : "Please send the email from your email client.",
       });
       
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: '',
-        privacyAgreed: false
-      });
+      // Reset form after a brief delay
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: '',
+          privacyAgreed: false
+        });
+      }, 1000);
       
       setIsSubmitting(false);
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error opening email client:", error);
       toast({
-        title: language === 'zh' ? "發送失敗" : "Failed to send",
-        description: language === 'zh' ? "發送您的訊息時出錯，請稍後再試。" : "There was an error sending your message. Please try again later.",
+        title: language === 'zh' ? "無法開啟郵件客戶端" : "Cannot open email client",
+        description: language === 'zh' ? "請確保您已安裝並配置了郵件客戶端。" : "Please ensure you have an email client installed and configured.",
         variant: "destructive",
       });
       setIsSubmitting(false);
