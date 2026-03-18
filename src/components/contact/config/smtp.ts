@@ -5,5 +5,5 @@ export const smtpConfig = {
   port: 465,
   encryption: "ssl",
   username: "web_contact_form@10gtechnology.com",
-  password: "qc8--676gW",
+  password: "XXX--XXXXX",
 };
