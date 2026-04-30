@@ -67,7 +67,7 @@ const Services = () => {
       path: 'http://cyberrisk.10gtechnology.com/',
       badge: language === 'zh' ? '免費' : language === 'ja' ? '無料' : 'FREE'
     },
-
+    {
       icon: <Monitor size={32} />,
       title: language === 'zh' ? 'TeamViewer替代方案' : language === 'ja' ? 'TeamViewer代替ソリューション' : 'TeamViewer Replacement',
       description: language === 'zh' 
