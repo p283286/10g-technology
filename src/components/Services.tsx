@@ -12,19 +12,33 @@ interface ServiceCardProps {
   title: string;
   description: string;
   path: string;
+  badge?: string;
 }
 
-const ServiceCard = ({ icon, title, description, path }: ServiceCardProps) => {
+const ServiceCard = ({ icon, title, description, path, badge }: ServiceCardProps) => {
   const navigate = useNavigate();
   const { language } = useLanguage();
   
+  const isExternal = path.startsWith('http://') || path.startsWith('https://');
+  
   const handleLearnMore = () => {
-    navigate(path);
+    if (isExternal) {
+      window.open(path, '_blank', 'noopener,noreferrer');
+    } else {
+      navigate(path);
+    }
   };
   
   return (
     <div className="cyber-card p-6 h-full hover:border-cyber-accent transition-all duration-300 hover:shadow-lg flex flex-col">
-      <div className="text-cyber-accent mb-4">{icon}</div>
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-cyber-accent">{icon}</div>
+        {badge && (
+          <span className="bg-cyber-warning text-cyber-dark text-xs font-bold px-2 py-1 rounded">
+            {badge}
+          </span>
+        )}
+      </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
       <p className="text-slate-600 flex-grow">{description}</p>
       <Button 
