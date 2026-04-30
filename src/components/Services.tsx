@@ -55,8 +55,19 @@ const ServiceCard = ({ icon, title, description, path, badge }: ServiceCardProps
 const Services = () => {
   const { language } = useLanguage();
   
-  const services = [
+  const services: ServiceCardProps[] = [
     {
+      icon: <Gauge size={32} />,
+      title: language === 'zh' ? '免費Cyber Risk風險檢查' : language === 'ja' ? '無料サイバーリスクチェック' : 'Free Cyber Risk Assessment',
+      description: language === 'zh'
+        ? '免費線上自助評估工具，讓您快速檢查企業的網絡安全風險狀況，識別潛在威脅並獲得即時建議。'
+        : language === 'ja'
+        ? '企業のサイバーセキュリティリスク状況を迅速にチェックし、潜在的な脅威を特定して即時のアドバイスを得られる無料オンラインセルフ評価ツール。'
+        : 'Free online self-assessment tool to quickly check your enterprise cybersecurity risk posture, identify potential threats, and receive instant recommendations.',
+      path: 'http://cyberrisk.10gtechnology.com/',
+      badge: language === 'zh' ? '免費' : language === 'ja' ? '無料' : 'FREE'
+    },
+
       icon: <Monitor size={32} />,
       title: language === 'zh' ? 'TeamViewer替代方案' : language === 'ja' ? 'TeamViewer代替ソリューション' : 'TeamViewer Replacement',
       description: language === 'zh' 
