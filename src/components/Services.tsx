@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Shield, Search, Lock, AlertTriangle, Activity, 
-  Database, UserCheck, File, Monitor, Users, Key, BookOpen, Video, FileText
+  Database, UserCheck, File, Monitor, Users, Key, BookOpen, Video, FileText, Gauge
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
