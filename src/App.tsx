@@ -39,6 +39,7 @@ const App = () => (
             <Route path="/access-card-protection" element={<AccessCardProtection />} />
             <Route path="/security-training" element={<SecurityTraining />} />
             <Route path="/ransomware-service" element={<RansomwareService />} />
+            <Route path="/security-resources" element={<SecurityResources />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
