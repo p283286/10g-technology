@@ -101,10 +101,14 @@ const translations: Record<Language, Record<string, string>> = {
     'cve.title': '最新 CVE 漏洞演示',
     'cve.subtitle': '觀看真實的漏洞利用演示，了解攻擊原理並掌握防禦策略。',
     'cve.tag': '視頻',
+    'cve.mitigation': '緩解措施',
+    'cve.reference': '參考資料',
     'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
-    'cve.copyfail.desc': '此視頻演示 CVE-2026-31431 漏洞 (Copy Fail)，展示複製操作中的安全缺陷如何被攻擊者利用以洩露敏感資料或執行未授權操作，並說明相應的緩解措施。',
+    'cve.copyfail.desc': '此視頻演示 CVE-2026-31431 漏洞 (Copy Fail)，展示複製操作中的安全缺陷如何被攻擊者利用以洩露敏感資料或執行未授權操作。',
+    'cve.copyfail.mitigation': '及時安裝官方安全更新；對剪貼簿與複製操作實施存取控制與內容過濾；停用不必要的剪貼簿共享；啟用端點偵測與回應 (EDR) 監控異常的剪貼簿存取行為；對敏感資料的複製操作進行審計記錄。',
     'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
-    'cve.dirtyfrag.desc': '此視頻演示 Dirtyfrag 系列漏洞 (CVE-2026-43284 與 CVE-2026-43500)，展示記憶體碎片操控如何導致權限提升或系統破壞，並提供偵測與防禦建議。',
+    'cve.dirtyfrag.desc': '此視頻演示 Dirtyfrag 系列漏洞 (CVE-2026-43284 與 CVE-2026-43500)，展示記憶體碎片操控如何導致權限提升或系統破壞。',
+    'cve.dirtyfrag.mitigation': '立即套用核心 (kernel) 與系統的最新安全補丁；啟用 KASLR 與記憶體保護機制；限制本機使用者權限並落實最小權限原則；部署 EDR 偵測異常的記憶體分配與釋放模式；定期審查並更新弱點掃描基線。',
   },
   en: {
     // Common
