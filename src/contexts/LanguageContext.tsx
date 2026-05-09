@@ -192,10 +192,14 @@ const translations: Record<Language, Record<string, string>> = {
     'cve.title': 'Latest CVE Vulnerability Demonstrations',
     'cve.subtitle': 'Watch real-world exploit demonstrations to understand attack mechanics and defense strategies.',
     'cve.tag': 'Video',
+    'cve.mitigation': 'Mitigation',
+    'cve.reference': 'Reference',
     'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
-    'cve.copyfail.desc': 'This video demonstrates the CVE-2026-31431 (Copy Fail) vulnerability, showing how flaws in copy operations can be exploited to leak sensitive data or perform unauthorized actions, along with mitigation measures.',
+    'cve.copyfail.desc': 'This video demonstrates the CVE-2026-31431 (Copy Fail) vulnerability, showing how flaws in copy operations can be exploited to leak sensitive data or perform unauthorized actions.',
+    'cve.copyfail.mitigation': 'Apply official security updates promptly; enforce access control and content filtering on clipboard and copy operations; disable unnecessary clipboard sharing; deploy EDR to monitor abnormal clipboard access; audit copy operations involving sensitive data.',
     'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
-    'cve.dirtyfrag.desc': 'This video demonstrates the Dirtyfrag vulnerabilities (CVE-2026-43284 and CVE-2026-43500), showing how memory fragmentation manipulation can lead to privilege escalation or system compromise, with detection and defense guidance.',
+    'cve.dirtyfrag.desc': 'This video demonstrates the Dirtyfrag vulnerabilities (CVE-2026-43284 and CVE-2026-43500), showing how memory fragmentation manipulation can lead to privilege escalation or system compromise.',
+    'cve.dirtyfrag.mitigation': 'Immediately apply the latest kernel and OS security patches; enable KASLR and memory protection features; restrict local user privileges and enforce least privilege; deploy EDR to detect abnormal memory allocation/free patterns; regularly review and update vulnerability scanning baselines.',
   },
   ja: {
     // Common
