@@ -183,6 +183,15 @@ const translations: Record<Language, Record<string, string>> = {
     // FAQ
     'faq.title': 'Frequently Asked Questions',
     'faq.description': 'Browse through our most commonly asked cybersecurity questions and answers. If you have any additional inquiries, please feel free to contact us directly.',
+
+    // CVE Videos
+    'cve.title': 'Latest CVE Vulnerability Demonstrations',
+    'cve.subtitle': 'Watch real-world exploit demonstrations to understand attack mechanics and defense strategies.',
+    'cve.tag': 'Video',
+    'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
+    'cve.copyfail.desc': 'This video demonstrates the CVE-2026-31431 (Copy Fail) vulnerability, showing how flaws in copy operations can be exploited to leak sensitive data or perform unauthorized actions, along with mitigation measures.',
+    'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
+    'cve.dirtyfrag.desc': 'This video demonstrates the Dirtyfrag vulnerabilities (CVE-2026-43284 and CVE-2026-43500), showing how memory fragmentation manipulation can lead to privilege escalation or system compromise, with detection and defense guidance.',
   },
   ja: {
     // Common
