@@ -160,6 +160,18 @@ const SecurityResources = () => {
       description: '分析真實的勒索軟件攻擊案例，了解攻擊路徑和防禦方法。',
       type: '視頻',
       downloadLink: '#'
+    },
+    {
+      title: 'Copy Fail - CVE-2026-31431',
+      description: '此視頻演示 CVE-2026-31431 漏洞 (Copy Fail)，展示複製操作中的安全缺陷如何被攻擊者利用以洩露敏感資料或執行未授權操作，並說明相應的緩解措施。',
+      type: '視頻',
+      downloadLink: '/videos/Copy_Fail_CVE-2026-31431.mp4'
+    },
+    {
+      title: 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
+      description: '此視頻演示 Dirtyfrag 系列漏洞 (CVE-2026-43284 與 CVE-2026-43500)，展示記憶體碎片操控如何導致權限提升或系統破壞，並提供偵測與防禦建議。',
+      type: '視頻',
+      downloadLink: '/videos/Dirtyfrag_CVE-2026-43284_CVE-2026-43500.mp4'
     }
   ];
 
