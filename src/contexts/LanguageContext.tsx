@@ -270,6 +270,15 @@ const translations: Record<Language, Record<string, string>> = {
     // FAQ
     'faq.title': 'よくある質問',
     'faq.description': 'サイバーセキュリティに関する最もよくある質問と回答をご覧ください。さらに質問がある場合は、お気軽にお問い合わせください。',
+
+    // CVE Videos
+    'cve.title': '最新 CVE 脆弱性デモ',
+    'cve.subtitle': '実際の脆弱性悪用デモを視聴し、攻撃の仕組みと防御戦略を理解しましょう。',
+    'cve.tag': '動画',
+    'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
+    'cve.copyfail.desc': 'この動画では CVE-2026-31431 (Copy Fail) 脆弱性を実演し、コピー操作の不備が攻撃者によって機密情報の漏洩や不正操作の実行に悪用される仕組みと、その緩和策を説明します。',
+    'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
+    'cve.dirtyfrag.desc': 'この動画では Dirtyfrag 脆弱性 (CVE-2026-43284 および CVE-2026-43500) を実演し、メモリフラグメンテーションの操作が権限昇格やシステム侵害につながる仕組みと、検出および防御の指針を示します。',
   }
 };
 
