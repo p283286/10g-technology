@@ -101,10 +101,14 @@ const translations: Record<Language, Record<string, string>> = {
     'cve.title': '最新 CVE 漏洞演示',
     'cve.subtitle': '觀看真實的漏洞利用演示，了解攻擊原理並掌握防禦策略。',
     'cve.tag': '視頻',
+    'cve.mitigation': '緩解措施',
+    'cve.reference': '參考資料',
     'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
-    'cve.copyfail.desc': '此視頻演示 CVE-2026-31431 漏洞 (Copy Fail)，展示複製操作中的安全缺陷如何被攻擊者利用以洩露敏感資料或執行未授權操作，並說明相應的緩解措施。',
+    'cve.copyfail.desc': '此視頻演示 CVE-2026-31431 漏洞 (Copy Fail)，展示複製操作中的安全缺陷如何被攻擊者利用以洩露敏感資料或執行未授權操作。',
+    'cve.copyfail.mitigation': '及時安裝官方安全更新；對剪貼簿與複製操作實施存取控制與內容過濾；停用不必要的剪貼簿共享；啟用端點偵測與回應 (EDR) 監控異常的剪貼簿存取行為；對敏感資料的複製操作進行審計記錄。',
     'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
-    'cve.dirtyfrag.desc': '此視頻演示 Dirtyfrag 系列漏洞 (CVE-2026-43284 與 CVE-2026-43500)，展示記憶體碎片操控如何導致權限提升或系統破壞，並提供偵測與防禦建議。',
+    'cve.dirtyfrag.desc': '此視頻演示 Dirtyfrag 系列漏洞 (CVE-2026-43284 與 CVE-2026-43500)，展示記憶體碎片操控如何導致權限提升或系統破壞。',
+    'cve.dirtyfrag.mitigation': '立即套用核心 (kernel) 與系統的最新安全補丁；啟用 KASLR 與記憶體保護機制；限制本機使用者權限並落實最小權限原則；部署 EDR 偵測異常的記憶體分配與釋放模式；定期審查並更新弱點掃描基線。',
   },
   en: {
     // Common
@@ -188,10 +192,14 @@ const translations: Record<Language, Record<string, string>> = {
     'cve.title': 'Latest CVE Vulnerability Demonstrations',
     'cve.subtitle': 'Watch real-world exploit demonstrations to understand attack mechanics and defense strategies.',
     'cve.tag': 'Video',
+    'cve.mitigation': 'Mitigation',
+    'cve.reference': 'Reference',
     'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
-    'cve.copyfail.desc': 'This video demonstrates the CVE-2026-31431 (Copy Fail) vulnerability, showing how flaws in copy operations can be exploited to leak sensitive data or perform unauthorized actions, along with mitigation measures.',
+    'cve.copyfail.desc': 'This video demonstrates the CVE-2026-31431 (Copy Fail) vulnerability, showing how flaws in copy operations can be exploited to leak sensitive data or perform unauthorized actions.',
+    'cve.copyfail.mitigation': 'Apply official security updates promptly; enforce access control and content filtering on clipboard and copy operations; disable unnecessary clipboard sharing; deploy EDR to monitor abnormal clipboard access; audit copy operations involving sensitive data.',
     'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
-    'cve.dirtyfrag.desc': 'This video demonstrates the Dirtyfrag vulnerabilities (CVE-2026-43284 and CVE-2026-43500), showing how memory fragmentation manipulation can lead to privilege escalation or system compromise, with detection and defense guidance.',
+    'cve.dirtyfrag.desc': 'This video demonstrates the Dirtyfrag vulnerabilities (CVE-2026-43284 and CVE-2026-43500), showing how memory fragmentation manipulation can lead to privilege escalation or system compromise.',
+    'cve.dirtyfrag.mitigation': 'Immediately apply the latest kernel and OS security patches; enable KASLR and memory protection features; restrict local user privileges and enforce least privilege; deploy EDR to detect abnormal memory allocation/free patterns; regularly review and update vulnerability scanning baselines.',
   },
   ja: {
     // Common
@@ -275,10 +283,14 @@ const translations: Record<Language, Record<string, string>> = {
     'cve.title': '最新 CVE 脆弱性デモ',
     'cve.subtitle': '実際の脆弱性悪用デモを視聴し、攻撃の仕組みと防御戦略を理解しましょう。',
     'cve.tag': '動画',
+    'cve.mitigation': '緩和策',
+    'cve.reference': '参考資料',
     'cve.copyfail.title': 'Copy Fail - CVE-2026-31431',
-    'cve.copyfail.desc': 'この動画では CVE-2026-31431 (Copy Fail) 脆弱性を実演し、コピー操作の不備が攻撃者によって機密情報の漏洩や不正操作の実行に悪用される仕組みと、その緩和策を説明します。',
+    'cve.copyfail.desc': 'この動画では CVE-2026-31431 (Copy Fail) 脆弱性を実演し、コピー操作の不備が攻撃者によって機密情報の漏洩や不正操作の実行に悪用される仕組みを示します。',
+    'cve.copyfail.mitigation': '公式のセキュリティ更新を速やかに適用する。クリップボードおよびコピー操作にアクセス制御とコンテンツフィルタリングを実施する。不要なクリップボード共有を無効化する。EDR を導入し異常なクリップボードアクセスを監視する。機密データのコピー操作を監査する。',
     'cve.dirtyfrag.title': 'Dirtyfrag - CVE-2026-43284 / CVE-2026-43500',
-    'cve.dirtyfrag.desc': 'この動画では Dirtyfrag 脆弱性 (CVE-2026-43284 および CVE-2026-43500) を実演し、メモリフラグメンテーションの操作が権限昇格やシステム侵害につながる仕組みと、検出および防御の指針を示します。',
+    'cve.dirtyfrag.desc': 'この動画では Dirtyfrag 脆弱性 (CVE-2026-43284 および CVE-2026-43500) を実演し、メモリフラグメンテーションの操作が権限昇格やシステム侵害につながる仕組みを示します。',
+    'cve.dirtyfrag.mitigation': 'カーネルおよび OS の最新セキュリティパッチを直ちに適用する。KASLR とメモリ保護機能を有効化する。ローカルユーザー権限を制限し最小権限の原則を徹底する。EDR で異常なメモリ確保・解放パターンを検知する。脆弱性スキャンのベースラインを定期的に見直す。',
   }
 };
 
