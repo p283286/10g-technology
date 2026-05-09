@@ -16,6 +16,7 @@ import PhysicalSecurity from "./pages/PhysicalSecurity";
 import AccessCardProtection from "./pages/AccessCardProtection";
 import SecurityTraining from "./pages/SecurityTraining";
 import RansomwareService from "./pages/RansomwareService";
+import SecurityResources from "./pages/SecurityResources";
 
 const queryClient = new QueryClient();
 
